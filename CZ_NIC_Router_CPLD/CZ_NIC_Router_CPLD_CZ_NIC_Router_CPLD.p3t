@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.log"
+-o "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.csv"
+-pr "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf"

@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell turriscpld
+   Instance path: turriscpld
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     380.00        100.0
+                                  LUT4	     711.00        100.0
+                                 IOBUF	        153        100.0
+                                PFUREG	        297        100.0
+                                RIPPLE	         23        100.0

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Report>
+<ReportView version="2.0">
+    <Implement name="CZ_NIC_Router_CPLD">
+        <ToolReport id="toolhle_genhierarchy" path="H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001_certuma/CZ_NIC_Router_CPLD/hdla_gen_hierarchy.html" status="1"/>
+        <ToolReport id="toolhle_runbkm" path="" status="0"/>
+        <ToolReport id="toolpio" path="" status="0"/>
+        <ToolReport id="toolsso" path="" status="0"/>
+    </Implement>
+</ReportView>

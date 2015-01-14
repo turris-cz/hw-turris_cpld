@@ -1,0 +1,390 @@
+//---------------------------------------------------------------------------
+//  Project TURRIS, CPLD 
+//  Copyright (C) 2013  CZ.NIC, z.s.p.o. (http://www.nic.cz)
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//---------------------------------------------------------------------------
+COMMERCIAL ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+FREQUENCY PORT "clkin66" 66.000000 MHz ;
+FREQUENCY PORT "clkin2m" 2.048000 MHz ;
+FREQUENCY PORT "pld_clk" 0.032768 MHz ;
+VOLTAGE 3.300 V;
+IOBUF ALLPORTS IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+BANK 0 VCCIO 3.3 V;
+BANK 1 VCCIO 3.3 V;
+BANK 2 VCCIO 3.3 V;
+BANK 3 VCCIO 3.3 V;
+BANK 4 VCCIO 3.3 V;
+BANK 5 VCCIO 3.3 V;
+BANK 6 VCCIO 3.3 V;
+BANK 7 VCCIO 3.3 V;
+//--------------------------------------------------------------------------------------------
+// FREESCALE PINs
+// INPUTs
+//--------------------------------------------------------------------------------------------
+LOCATE COMP "wd_in" SITE "R5" ;//watchdog timer over flow output	
+IOBUF PORT "wd_in" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "clkin66" SITE "M9" ;//66MHz clock input
+IOBUF PORT "clkin66" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cop_srst_n" SITE "B1" ;//SW reset from JTAG
+IOBUF PORT "cop_srst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cop_hrst_n" SITE "C1" ;//HW reset from JTAG
+IOBUF PORT "cop_hrst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cop_trst_n" SITE "D2" ;//test reset from JTAG
+IOBUF PORT "cop_trst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "ps_vcore_pg" SITE "N1" ;//cpu core voltage power good
+IOBUF PORT "ps_vcore_pg" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "ps_ddr_pg" SITE "R1" ;//DDR power good
+IOBUF PORT "ps_ddr_pg" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la28" SITE "D16" ;//local address
+IOBUF PORT "la28" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fbank_select" SITE "J15" ;//128Mb flash bank select input
+IOBUF PORT "fbank_select" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "lcs3_n" SITE "K15" ;//local bus chip select         //TR old LCS3_N pin //original pin
+IOBUF PORT "lcs3_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "lcs3_n" SITE "F1" ;//local bus chip select         //TR new LCS3_N pin
+//IOBUF PORT "lcs3_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "switch_1" SITE "N16" ;//input of switch on the board
+IOBUF PORT "switch_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "switch_2" SITE "M15" ;//input of switch on the board
+LOCATE COMP "switch_2" SITE "M16" ;//input of switch on the board
+IOBUF PORT "switch_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "switch_3" SITE "M16" ;//input of switch on the board
+LOCATE COMP "switch_3" SITE "M15" ;//input of switch on the board
+IOBUF PORT "switch_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "switch_4" SITE "L16" ;//input of switch on the board
+LOCATE COMP "switch_4" SITE "L15" ;//input of switch on the board
+IOBUF PORT "switch_4" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "switch_5" SITE "L15" ;//input of switch on the board
+LOCATE COMP "switch_5" SITE "L16" ;//input of switch on the board
+IOBUF PORT "switch_5" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "switch_6" SITE "K16" ;//input of switch on the board
+IOBUF PORT "switch_6" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "switch_7" SITE "";	//input of switch on the board
+//IOBUF PORT "switch_7" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+LOCATE COMP "switch_8" SITE "B11" ;//input of switch on the board
+IOBUF PORT "switch_8" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "rst_pld_n" SITE "G2" ;//reset triggered by max811 with manual switch
+IOBUF PORT "rst_pld_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "clkin2m" SITE "D7" ;//TDM clock 2.048MHz input
+IOBUF PORT "clkin2m" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "hrstreq_n" SITE "B2" ;//HW reset request from cpu
+IOBUF PORT "hrstreq_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_clk" SITE "A9" ;//clock 32.768KHz input for count and delay
+IOBUF PORT "pld_clk" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//TR iic2 logging of status LOCATE COMP "i2c_testdat00" SITE "D6";	//I2C control GPIO bit0, paul0620
+//TR iic2 logging of status IOBUF PORT "i2c_testdat00" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "i2c_testdat01" SITE "E5";	//
+//IOBUF PORT "i2c_testdat01" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "i2c_testdat02" SITE "F5";	//
+//IOBUF PORT "i2c_testdat02" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//TR iic2 logging of status LOCATE COMP "i2c_testdat03" SITE "F6";	//I2C control GPIO bit3, paul0620
+//TR iic2 logging of status IOBUF PORT "i2c_testdat03" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+LOCATE COMP "iic2_ctl_1" SITE "D6" ;//
+IOBUF PORT "iic2_ctl_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "iic2_ctl_2" SITE "E5" ;//
+IOBUF PORT "iic2_ctl_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "iic2_ctl_3" SITE "F5" ;//
+IOBUF PORT "iic2_ctl_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "iic2_ctl_4" SITE "F6" ;//
+IOBUF PORT "iic2_ctl_4" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_rev_0" SITE "T8" ;//PCB revision
+IOBUF PORT "pcb_rev_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_rev_1" SITE "T7" ;//PCB revision
+IOBUF PORT "pcb_rev_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_rev_2" SITE "R7" ;//PCB revision
+IOBUF PORT "pcb_rev_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_id_0" SITE "R8" ;//PCB type
+IOBUF PORT "pcb_id_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_id_1" SITE "P7" ;//PCB type
+IOBUF PORT "pcb_id_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcb_id_2" SITE "P8" ;//PCB type
+IOBUF PORT "pcb_id_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "xlgpl4" SITE "E3";
+//IOBUF PORT "xlgpl4" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "xlgpl2" SITE "E2";
+//IOBUF PORT "xlgpl2" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "xlwe0_n" SITE "C13";
+//IOBUF PORT "xlwe0_n" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "cfg_sdwidth" SITE "H16";
+//IOBUF PORT "cfg_sdwidth" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//--------------------------------------------------------------------------------------------
+// FREESCALE PINs
+// OUTPUTs
+//--------------------------------------------------------------------------------------------
+LOCATE COMP "wd_cfg_0" SITE "T2" ;//watchdog timeout period configure
+IOBUF PORT "wd_cfg_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "wd_cfg_1" SITE "T3" ;//watchdog timeout period configure
+IOBUF PORT "wd_cfg_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "wd_cfg_2" SITE "R4" ;//watchdog timeout period configure
+IOBUF PORT "wd_cfg_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "lale2" SITE "R10" ;//POR Pin
+IOBUF PORT "lale2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "bps_out" SITE "T10" ;//bypass relays control
+IOBUF PORT "bps_out" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cfg_drv2_n" SITE "T11" ;//POR drive control
+IOBUF PORT "cfg_drv2_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "lbctl" SITE "R11" ;//POR Pin                    //TR old LBCTL pin //original pin
+IOBUF PORT "lbctl" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "lbctl" SITE "D3" ;//POR Pin                       //TR new LBCTL pin
+//IOBUF PORT "lbctl" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "rst_flsh_n" SITE "R12" ;//flash reset
+IOBUF PORT "rst_flsh_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//TR use for ddr3 power enable LOCATE COMP "qespi_iic2n" SITE "P12" ;//QESPI_IIC select
+//TR use for ddr3 power enable IOBUF PORT "qespi_iic2n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "gvdd_pwr_on2" SITE "P12" ;//DDR voltage enable
+//IOBUF PORT "gvdd_pwr_on2" IO_TYPE=LVCMOS33 PULLMODE=NONE  OPENDRAIN=ON;
+IOBUF PORT "gvdd_pwr_on2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;//TR change to push push 
+//LOCATE COMP "fbank_sel" SITE "";			//NOR flash bank select
+//IOBUF PORT "fbank_sel" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+LOCATE COMP "boot_sel" SITE "T12" ;//boot flash select, NOR or NAND flash
+IOBUF PORT "boot_sel" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cpu_srst_n" SITE "R13" ;//cpu SW reset
+IOBUF PORT "cpu_srst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cpu_hrst_n" SITE "R14" ;//cpu HW reset
+IOBUF PORT "cpu_hrst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "tdm_clk" SITE "T14" ;//TDM 2.048MHz clock to CPU			
+IOBUF PORT "tdm_clk" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "dma1_ddone_n" SITE "T15" ;//POR Pin
+IOBUF PORT "dma1_ddone_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "ready_p1" SITE "R15" ;//POR Pin
+IOBUF PORT "ready_p1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cpu_trst_n" SITE "R16" ;//cpu JTAG reset
+IOBUF PORT "cpu_trst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "tdm_clk_slic1" SITE "E1" ;//TDM 2.048MHz to SLIC1  //TR use for new lwe0_n pin
+//IOBUF PORT "tdm_clk_slic1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "tdm_clk_slic2" SITE "F1" ;//TDM 2.048MHz to SLIC2  //TR use for new lcs3_n pin 
+//IOBUF PORT "tdm_clk_slic2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fxs_led_0" SITE "H2" ;//FXS ports LED control
+IOBUF PORT "fxs_led_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fxs_led_1" SITE "J2" ;//FXS ports LED control
+IOBUF PORT "fxs_led_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fxs_led_2" SITE "J1" ;//FXS ports LED control
+IOBUF PORT "fxs_led_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fxs_led_3" SITE "K1" ;//FXS ports LED control
+IOBUF PORT "fxs_led_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "status_led" SITE "K2" ;//Status LED control
+//IOBUF PORT "status_led" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "bps_fxo_led1" SITE "L2" ;//Bypass or FXO port LED control
+IOBUF PORT "bps_fxo_led1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcie_rstn" SITE "M1" ;//PCI Express reset
+IOBUF PORT "pcie_rstn" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+LOCATE COMP "ctl_vcore_en" SITE "P1" ;//cpu core voltage enable
+//TR change to pull down IOBUF PORT "ctl_vcore_en" IO_TYPE=LVCMOS33 PULLMODE=NONE  OPENDRAIN=ON;
+//IOBUF PORT "ctl_vcore_en" IO_TYPE=LVCMOS33 PULLMODE=DOWN  OPENDRAIN=ON;
+IOBUF PORT "ctl_vcore_en" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pcie_sel" SITE "M3" ;//X1 PCIe connector or PCIe to SATA
+IOBUF PORT "pcie_sel" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "gvdd_pwr_on" SITE "R2" ;//DDR voltage enable
+IOBUF PORT "gvdd_pwr_on" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+//IOBUF PORT "gvdd_pwr_on" IO_TYPE=LVCMOS33 PULLMODE=NONE; //TR change to push push 
+LOCATE COMP "cfg_cpu_vdd_0" SITE "N4" ;//CPU core voltage config
+IOBUF PORT "cfg_cpu_vdd_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cfg_cpu_vdd_1" SITE "N3" ;//CPU core voltage config
+IOBUF PORT "cfg_cpu_vdd_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "sgmii_rstn" SITE "M5" ;//SGMII PHY reset
+IOBUF PORT "sgmii_rstn" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+LOCATE COMP "rgmii_rstn" SITE "M4" ;//RGMII PHY reset
+IOBUF PORT "rgmii_rstn" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+LOCATE COMP "la16" SITE "H14" ;//POR Pin
+IOBUF PORT "la16" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la23" SITE "E14" ;//POR Pin
+IOBUF PORT "la23" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la24" SITE "E16" ;//POR Pin
+IOBUF PORT "la24" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la25" SITE "F14" ;//POR Pin
+IOBUF PORT "la25" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la26" SITE "E13" ;//POR Pin
+IOBUF PORT "la26" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cfg_strobe4a" SITE "G13" ;//LA_QETDM SW enable
+IOBUF PORT "cfg_strobe4a" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "load_default_n" SITE "H12" ;//load default configuration enable
+IOBUF PORT "load_default_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cfg_strobe2a" SITE "L14" ;//UART_QETDM SW enable
+IOBUF PORT "cfg_strobe2a" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "cfg_strobe2" SITE "M14" ;//IIC_QESPI SW enable
+IOBUF PORT "cfg_strobe2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "tdmd_uart1n" SITE "N12" ;//UART_QETDM select
+IOBUF PORT "tdmd_uart1n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "tdm_lan" SITE "D3" ;//LA_QETDM select            //TR use for new lbctl pin
+//IOBUF PORT "tdm_lan" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_tsec3_txd2" SITE "C5" ;//POR Pin
+IOBUF PORT "pld_tsec3_txd2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_tsec1_tx_er" SITE "B6" ;//POR Pin
+IOBUF PORT "pld_tsec1_tx_er" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_1588_pulse_out2" SITE "A10" ;//POR Pin
+IOBUF PORT "pld_1588_pulse_out2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_1588_clk_out" SITE "C9" ;//POR Pin
+IOBUF PORT "pld_1588_clk_out" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_tsec3_txd0" SITE "C10" ;//POR Pin
+IOBUF PORT "pld_tsec3_txd0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_uart1_sout" SITE "D9" ;//POR Pin
+IOBUF PORT "pld_uart1_sout" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_1588_pulse_out1" SITE "D10" ;//POR Pin
+IOBUF PORT "pld_1588_pulse_out1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "pld_tsec3_txd1" SITE "B10" ;//POR Pin
+IOBUF PORT "pld_tsec3_txd1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "tdma_txd0" SITE "A11" ;//POR Pin
+IOBUF PORT "tdma_txd0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fbank_sel_128m" SITE "T13" ;//128Mb flash bank select
+IOBUF PORT "fbank_sel_128m" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fbank_sel_256m" SITE "P11" ;//256Mb flash bank select
+IOBUF PORT "fbank_sel_256m" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fbank_sel_512m" SITE "P14" ;//512Mb flash bank select	
+IOBUF PORT "fbank_sel_512m" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "x2jtag_tck" SITE "A5";
+//IOBUF PORT "x2jtag_tck" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "x2jtag_tdi" SITE "C7";
+//IOBUF PORT "x2jtag_tdi" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "x2jtag_tms" SITE "B7";
+//IOBUF PORT "x2jtag_tms" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "x2jtag_trst" SITE "D11";
+//IOBUF PORT "x2jtag_trst" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+//LOCATE COMP "x2jtag_tdo" SITE "D12";
+//IOBUF PORT "x2jtag_tdo" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+LOCATE COMP "xresetn" SITE "C11" ;//PMC reset signal, Paul0620
+IOBUF PORT "xresetn" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "ddr_rst_n" SITE "T4" ;// DDR reset signal, OD, rev4.1
+IOBUF PORT "ddr_rst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+LOCATE COMP "geth_sw_rst_n" SITE "T6" ;// VSC7385 Switch reset signal, rev4.1 //CZ.NIC WA_RESET_N
+IOBUF PORT "geth_sw_rst_n" IO_TYPE=LVCMOS33 PULLMODE=NONE OPENDRAIN=ON ;
+//--------------------------------------------------------------------------------------------
+// FREESCALE PINs
+// BIDIRs
+//--------------------------------------------------------------------------------------------
+//LOCATE COMP "data_0" SITE "C14" ;//local bus data
+//IOBUF PORT "data_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_1" SITE "B15" ;//local bus data
+//IOBUF PORT "data_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_2" SITE "C15" ;//local bus data
+//IOBUF PORT "data_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_3" SITE "A15" ;//local bus data
+//IOBUF PORT "data_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_4" SITE "B14" ;//local bus data
+//IOBUF PORT "data_4" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_5" SITE "B13" ;//local bus data
+//IOBUF PORT "data_5" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_6" SITE "A14" ;//local bus data
+//IOBUF PORT "data_6" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "data_7" SITE "A13" ;//local bus data
+//IOBUF PORT "data_7" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_7" SITE "C14" ;//local bus data
+IOBUF PORT "data_7" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_6" SITE "B15" ;//local bus data
+IOBUF PORT "data_6" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_5" SITE "C15" ;//local bus data
+IOBUF PORT "data_5" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_4" SITE "A15" ;//local bus data
+IOBUF PORT "data_4" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_3" SITE "B14" ;//local bus data
+IOBUF PORT "data_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_2" SITE "B13" ;//local bus data
+IOBUF PORT "data_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_1" SITE "A14" ;//local bus data
+IOBUF PORT "data_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "data_0" SITE "A13" ;//local bus data
+IOBUF PORT "data_0" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la31" SITE "D13" ;//local bus address and POR pin
+IOBUF PORT "la31" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la30" SITE "D15" ;//local bus address and POR pin
+IOBUF PORT "la30" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la29" SITE "C16" ;//local bus address and POR pin
+IOBUF PORT "la29" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "la27" SITE "D14" ;//local bus address and POR pin
+IOBUF PORT "la27" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "lwe0_n" SITE "H13" ;//local bus write enable and POR Pin //TR old lwe0_n pin  //original pin
+IOBUF PORT "lwe0_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//LOCATE COMP "lwe0_n" SITE "E1" ;//local bus write enable and POR Pin    //TR new lwe0_n pin
+//IOBUF PORT "lwe0_n" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "lgpl2" SITE "F13" ;//local bus read enable and POR Pin
+IOBUF PORT "lgpl2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+//--------------------------------------------------------------------------------------------
+// CZ.NIC PINs
+// INPUTs
+//--------------------------------------------------------------------------------------------
+LOCATE COMP "ls_p0_led1000n" SITE "A3" ;//
+LOCATE COMP "ls_p0_led100n" SITE "A2" ;//
+LOCATE COMP "ls_p0_led10n" SITE "B3" ;//
+LOCATE COMP "ls_p1_led1000n" SITE "A4" ;//
+LOCATE COMP "ls_p1_led100n" SITE "E7" ;//
+LOCATE COMP "ls_p1_led10n" SITE "E6" ;//
+LOCATE COMP "ls_p2_led1000n" SITE "F16" ;//
+LOCATE COMP "ls_p2_led100n" SITE "F15" ;//
+LOCATE COMP "ls_p2_led10n" SITE "E15" ;//
+LOCATE COMP "ls_p3_led1000n" SITE "M12" ;//
+LOCATE COMP "ls_p3_led100n" SITE "N14" ;//
+LOCATE COMP "ls_p3_led10n" SITE "N15" ;//
+LOCATE COMP "ls_p4_led1000n" SITE "K12" ;//
+LOCATE COMP "ls_p4_led100n" SITE "J12" ;//
+LOCATE COMP "ls_p4_led10n" SITE "J16" ;//
+LOCATE COMP "wa_led_1" SITE "N5" ;//
+LOCATE COMP "wa_led_2" SITE "N6" ;//
+LOCATE COMP "cpu_temp_alert_n" SITE "P5" ;//
+LOCATE COMP "cpu_temp_crit_n" SITE "P6" ;//
+LOCATE COMP "cpu_fan_tach" SITE "R6" ;//
+LOCATE COMP "eeprom_spi_so" SITE "H5" ;//
+LOCATE COMP "front_led_intensity" SITE "J3" ;//
+LOCATE COMP "ps_1v50_pcie_pgood" SITE "K5" ;//
+//--------------------------------------------------------------------------------------------
+// CZ.NIC PINs
+// OUTPUTs
+//--------------------------------------------------------------------------------------------
+LOCATE COMP "fp_led_1" SITE "P2" ;//
+LOCATE COMP "fp_led_2" SITE "P3" ;//
+LOCATE COMP "fp_led_3" SITE "M8" ;//
+LOCATE COMP "fp_led_4" SITE "B5" ;//
+LOCATE COMP "fp_led_5" SITE "B4" ;//
+LOCATE COMP "fp_led_6" SITE "D5" ;//
+LOCATE COMP "fp_led_7" SITE "C8" ;//
+LOCATE COMP "fp_led_8" SITE "B8" ;//
+LOCATE COMP "fp_led_9" SITE "A7" ;//
+LOCATE COMP "fp_led_10" SITE "H15" ;//
+LOCATE COMP "fp_led_11" SITE "G12" ;//
+LOCATE COMP "fp_led_12" SITE "G16" ;//
+LOCATE COMP "fp_led_13" SITE "M11" ;//
+LOCATE COMP "fp_led_14" SITE "L11" ;//
+LOCATE COMP "fp_led_15" SITE "N13" ;//
+LOCATE COMP "fp_led_16" SITE "J13" ;//
+LOCATE COMP "fp_led_17" SITE "K14" ;//
+LOCATE COMP "fp_led_18" SITE "J14" ;//
+LOCATE COMP "fp_power_led_1" SITE "M10" ;//
+LOCATE COMP "fp_power_led_2" SITE "R9" ;//
+LOCATE COMP "fp_power_led_3" SITE "L1" ;//
+LOCATE COMP "fp_status_led_1" SITE "P10" ;//
+IOBUF PORT "fp_status_led_1" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fp_status_led_2" SITE "P9" ;//
+IOBUF PORT "fp_status_led_2" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "fp_status_led_3" SITE "K2" ;//
+IOBUF PORT "fp_status_led_3" IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+LOCATE COMP "bps_fxo_led2" SITE "K3" ;//
+LOCATE COMP "cpu_fan_pwm" SITE "T5" ;//
+LOCATE COMP "eeprom_spi_cs_n" SITE "H4" ;//
+LOCATE COMP "eeprom_spi_sck" SITE "G1" ;//
+LOCATE COMP "eeprom_spi_si" SITE "H1" ;//
+LOCATE COMP "cpld_i2c1_scl" SITE "N2" ;//
+LOCATE COMP "i2c1_en_cpld" SITE "J4" ;//
+LOCATE COMP "i2c1_en_cpu" SITE "J5" ;//
+//--------------------------------------------------------------------------------------------
+// CZ.NIC PINs
+// BIDIRs
+//--------------------------------------------------------------------------------------------
+LOCATE COMP "cpld_i2c1_sda" SITE "M2" ;//
+USE PRIMARY NET "clkin66_c" ;
+USE PRIMARY NET "lwe0_n_out" ;
+USE SECONDARY NET "color_pwm_clock" ;
+USE SECONDARY NET "mixed_rgb_intensity_pwm_clock" ;
+USE PRIMARY NET "pld_clk_c" ;
+USE PRIMARY NET "intensity_button_debounce_clock" ;

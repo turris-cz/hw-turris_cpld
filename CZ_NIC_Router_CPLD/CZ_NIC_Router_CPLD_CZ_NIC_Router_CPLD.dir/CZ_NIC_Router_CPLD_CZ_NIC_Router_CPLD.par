@@ -1,0 +1,28 @@
+PAR: Place And Route Diamond (64-bit) 2.2.0.101.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 06 10:52:13 2014
+
+D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga\bin\nt64\par -f
+CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.p2t
+CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd
+CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.dir
+CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf
+
+
+Preference file: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf.
+
+Level/      Number      Worst       Timing      Run         NCD
+Cost [ncd]  Unrouted    Slack       Score       Time        Status
+----------  --------    -----       --------    -----       ------
+5_1   *     0           8.186       0           11          Complete        
+
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 11 secs 
+
+par done!

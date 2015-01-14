@@ -1,0 +1,580 @@
+PAD Specification File
+***************************
+
+PART TYPE:        LCMXO1200C
+Performance Grade:      3
+PACKAGE:          FTBGA256
+Package Status:                     Final          Version 1.19
+
+Mon Jan 06 10:52:18 2014
+
+Pinout by Port Name:
++---------------------+----------+---------------+-------+-----------------------------------+
+| Port Name           | Pin/Bank | Buffer Type   | Site  | Properties                        |
++---------------------+----------+---------------+-------+-----------------------------------+
+| boot_sel            | T12/4    | LVCMOS33_OUT  | PB9F  | DRIVE:8mA SLEW:FAST               |
+| bps_fxo_led1        | L2/6     | LVCMOS33_OUT  | PL10D | DRIVE:8mA SLEW:FAST               |
+| bps_fxo_led2        | K3/6     | LVCMOS33_OUT  | PL9D  | DRIVE:8mA SLEW:FAST               |
+| bps_out             | T10/4    | LVCMOS33_OUT  | PB8C  | DRIVE:8mA SLEW:FAST               |
+| cfg_cpu_vdd_0       | N4/6     | LVCMOS33_OUT  | PL16A | DRIVE:8mA SLEW:FAST               |
+| cfg_cpu_vdd_1       | N3/6     | LVCMOS33_OUT  | PL16B | DRIVE:8mA SLEW:FAST               |
+| cfg_drv2_n          | T11/4    | LVCMOS33_OUT  | PB8D  | DRIVE:8mA SLEW:FAST               |
+| cfg_strobe2         | M14/3    | LVCMOS33_OUT  | PR13B | DRIVE:8mA SLEW:FAST               |
+| cfg_strobe2a        | L14/3    | LVCMOS33_OUT  | PR13A | DRIVE:8mA SLEW:FAST               |
+| cfg_strobe4a        | G13/2    | LVCMOS33_OUT  | PR7B  | DRIVE:8mA SLEW:FAST               |
+| clkin2m             | D7/0     | LVCMOS33_IN   | PT6F  | SLEW:FAST                         |
+| clkin66             | M9/4     | LVCMOS33_IN   | PB7F  | SLEW:FAST                         |
+| cop_hrst_n          | C1/7     | LVCMOS33_IN   | PL5B  | SLEW:FAST                         |
+| cop_srst_n          | B1/7     | LVCMOS33_IN   | PL5A  | SLEW:FAST                         |
+| cop_trst_n          | D2/7     | LVCMOS33_IN   | PL5C  | SLEW:FAST                         |
+| cpld_i2c1_scl       | N2/6     | LVCMOS33_OUT  | PL12D | DRIVE:8mA SLEW:FAST               |
+| cpld_i2c1_sda       | M2/6     | LVCMOS33_OUT  | PL12C | DRIVE:8mA SLEW:FAST               |
+| cpu_fan_pwm         | T5/5     | LVCMOS33_OUT  | PB4C  | DRIVE:8mA SLEW:FAST               |
+| cpu_fan_tach        | R6/5     | LVCMOS33_IN   | PB5A  | SLEW:FAST                         |
+| cpu_hrst_n          | R14/4    | LVCMOS33_OUT  | PB10B | DRIVE:8mA SLEW:FAST               |
+| cpu_srst_n          | R13/4    | LVCMOS33_OUT  | PB10A | DRIVE:8mA SLEW:FAST               |
+| cpu_trst_n          | R16/4    | LVCMOS33_OUT  | PB11B | DRIVE:8mA SLEW:FAST               |
+| ctl_vcore_en        | P1/6     | LVCMOS33_OUT  | PL11D | DRIVE:8mA SLEW:FAST               |
+| data_0              | A13/1    | LVCMOS33_BIDI | PT9E  | DRIVE:8mA SLEW:FAST               |
+| data_1              | A14/1    | LVCMOS33_BIDI | PT9F  | DRIVE:8mA SLEW:FAST               |
+| data_2              | B13/1    | LVCMOS33_BIDI | PT10E | DRIVE:8mA SLEW:FAST               |
+| data_3              | B14/1    | LVCMOS33_BIDI | PT11A | DRIVE:8mA SLEW:FAST               |
+| data_4              | A15/1    | LVCMOS33_BIDI | PT11C | DRIVE:8mA SLEW:FAST               |
+| data_5              | C15/2    | LVCMOS33_BIDI | PR5A  | DRIVE:8mA SLEW:FAST               |
+| data_6              | B15/1    | LVCMOS33_BIDI | PT11D | DRIVE:8mA SLEW:FAST               |
+| data_7              | C14/1    | LVCMOS33_BIDI | PT11B | DRIVE:8mA SLEW:FAST               |
+| ddr_rst_n           | T4/5     | LVCMOS33_OUT  | PB4D  | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| dma1_ddone_n        | T15/4    | LVCMOS33_OUT  | PB10D | DRIVE:8mA SLEW:FAST               |
+| eeprom_spi_cs_n     | H4/7     | LVCMOS33_OUT  | PL8A  | DRIVE:8mA SLEW:FAST               |
+| eeprom_spi_sck      | G1/7     | LVCMOS33_OUT  | PL8C  | DRIVE:8mA SLEW:FAST               |
+| eeprom_spi_si       | H1/7     | LVCMOS33_OUT  | PL8D  | DRIVE:8mA SLEW:FAST               |
+| fbank_sel_128m      | T13/4    | LVCMOS33_OUT  | PB9E  | DRIVE:8mA SLEW:FAST               |
+| fbank_sel_256m      | P11/4    | LVCMOS33_OUT  | PB9C  | DRIVE:8mA SLEW:FAST               |
+| fbank_sel_512m      | P14/4    | LVCMOS33_OUT  | PB10F | DRIVE:8mA SLEW:FAST               |
+| fbank_select        | J15/3    | LVCMOS33_IN   | PR10A | SLEW:FAST                         |
+| fp_led_1            | P2/5     | LVCMOS33_OUT  | PB2A  | DRIVE:8mA SLEW:FAST               |
+| fp_led_10           | H15/2    | LVCMOS33_OUT  | PR8D  | DRIVE:8mA SLEW:FAST               |
+| fp_led_11           | G12/2    | LVCMOS33_OUT  | PR7A  | DRIVE:8mA SLEW:FAST               |
+| fp_led_12           | G16/2    | LVCMOS33_OUT  | PR6D  | DRIVE:8mA SLEW:FAST               |
+| fp_led_13           | M11/3    | LVCMOS33_OUT  | PR16B | DRIVE:8mA SLEW:FAST               |
+| fp_led_14           | L11/3    | LVCMOS33_OUT  | PR16A | DRIVE:8mA SLEW:FAST               |
+| fp_led_15           | N13/3    | LVCMOS33_OUT  | PR15A | DRIVE:8mA SLEW:FAST               |
+| fp_led_16           | J13/3    | LVCMOS33_OUT  | PR11A | DRIVE:8mA SLEW:FAST               |
+| fp_led_17           | K14/3    | LVCMOS33_OUT  | PR10D | DRIVE:8mA SLEW:FAST               |
+| fp_led_18           | J14/3    | LVCMOS33_OUT  | PR10C | DRIVE:8mA SLEW:FAST               |
+| fp_led_2            | P3/5     | LVCMOS33_OUT  | PB2B  | DRIVE:8mA SLEW:FAST               |
+| fp_led_3            | M8/5     | LVCMOS33_OUT  | PB6B  | DRIVE:8mA SLEW:FAST               |
+| fp_led_4            | B5/0     | LVCMOS33_OUT  | PT3F  | DRIVE:8mA SLEW:FAST               |
+| fp_led_5            | B4/0     | LVCMOS33_OUT  | PT3E  | DRIVE:8mA SLEW:FAST               |
+| fp_led_6            | D5/0     | LVCMOS33_OUT  | PT3D  | DRIVE:8mA SLEW:FAST               |
+| fp_led_7            | C8/0     | LVCMOS33_OUT  | PT6D  | DRIVE:8mA SLEW:FAST               |
+| fp_led_8            | B8/0     | LVCMOS33_OUT  | PT6C  | DRIVE:8mA SLEW:FAST               |
+| fp_led_9            | A7/0     | LVCMOS33_OUT  | PT6B  | DRIVE:8mA SLEW:FAST               |
+| fp_power_led_1      | M10/4    | LVCMOS33_OUT  | PB7E  | DRIVE:8mA SLEW:FAST               |
+| fp_power_led_2      | R9/4     | LVCMOS33_OUT  | PB8A  | DRIVE:8mA SLEW:FAST               |
+| fp_power_led_3      | L1/6     | LVCMOS33_OUT  | PL11A | DRIVE:8mA SLEW:FAST               |
+| fp_status_led_1     | P10/4    | LVCMOS33_OUT  | PB7D  | DRIVE:8mA SLEW:FAST               |
+| fp_status_led_2     | P9/4     | LVCMOS33_OUT  | PB7C  | DRIVE:8mA SLEW:FAST               |
+| fp_status_led_3     | K2/6     | LVCMOS33_OUT  | PL10C | DRIVE:8mA SLEW:FAST               |
+| front_led_intensity | J3/6     | LVCMOS33_IN   | PL9C  | SLEW:FAST                         |
+| fxs_led_0           | H2/6     | LVCMOS33_OUT  | PL9A  | DRIVE:8mA SLEW:FAST               |
+| fxs_led_1           | J2/6     | LVCMOS33_OUT  | PL9B  | DRIVE:8mA SLEW:FAST               |
+| fxs_led_2           | J1/6     | LVCMOS33_OUT  | PL10A | DRIVE:8mA SLEW:FAST               |
+| fxs_led_3           | K1/6     | LVCMOS33_OUT  | PL10B | DRIVE:8mA SLEW:FAST               |
+| geth_sw_rst_n       | T6/5     | LVCMOS33_OUT  | PB5B  | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| gvdd_pwr_on         | R2/6     | LVCMOS33_OUT  | PL13D | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| gvdd_pwr_on2        | P12/4    | LVCMOS33_OUT  | PB9D  | DRIVE:8mA SLEW:FAST               |
+| hrstreq_n           | B2/0     | LVCMOS33_IN   | PT2A  | SLEW:FAST                         |
+| i2c1_en_cpld        | J4/6     | LVCMOS33_OUT  | PL13A | DRIVE:8mA SLEW:FAST               |
+| i2c1_en_cpu         | J5/6     | LVCMOS33_OUT  | PL13B | DRIVE:8mA SLEW:FAST               |
+| iic2_ctl_1          | D6/0     | LVCMOS33_OUT  | PT3C  | DRIVE:8mA SLEW:FAST               |
+| iic2_ctl_2          | E5/7     | LVCMOS33_OUT  | PL2B  | DRIVE:8mA SLEW:FAST               |
+| iic2_ctl_3          | F5/7     | LVCMOS33_OUT  | PL3A  | DRIVE:8mA SLEW:FAST               |
+| iic2_ctl_4          | F6/7     | LVCMOS33_OUT  | PL3B  | DRIVE:8mA SLEW:FAST               |
+| la16                | H14/2    | LVCMOS33_OUT  | PR8B  | DRIVE:8mA SLEW:FAST               |
+| la23                | E14/2    | LVCMOS33_OUT  | PR4A  | DRIVE:8mA SLEW:FAST               |
+| la24                | E16/2    | LVCMOS33_OUT  | PR5D  | DRIVE:8mA SLEW:FAST               |
+| la25                | F14/2    | LVCMOS33_OUT  | PR4B  | DRIVE:8mA SLEW:FAST               |
+| la26                | E13/2    | LVCMOS33_BIDI | PR3A  | DRIVE:8mA SLEW:FAST               |
+| la27                | D14/2    | LVCMOS33_BIDI | PR2A  | DRIVE:8mA SLEW:FAST               |
+| la28                | D16/2    | LVCMOS33_IN   | PR5C  | SLEW:FAST                         |
+| la29                | C16/2    | LVCMOS33_BIDI | PR4D  | DRIVE:8mA SLEW:FAST               |
+| la30                | D15/2    | LVCMOS33_BIDI | PR5B  | DRIVE:8mA SLEW:FAST               |
+| la31                | D13/2    | LVCMOS33_BIDI | PR2B  | DRIVE:8mA SLEW:FAST               |
+| lale2               | R10/4    | LVCMOS33_OUT  | PB8B  | DRIVE:8mA SLEW:FAST               |
+| lbctl               | R11/4    | LVCMOS33_OUT  | PB9A  | DRIVE:8mA SLEW:FAST               |
+| lcs3_n              | K15/3    | LVCMOS33_IN   | PR10B | SLEW:FAST                         |
+| lgpl2               | F13/2    | LVCMOS33_BIDI | PR3C  | DRIVE:8mA SLEW:FAST               |
+| load_default_n      | H12/2    | LVCMOS33_OUT  | PR7C  | DRIVE:8mA SLEW:FAST               |
+| ls_p0_led1000n      | A3/0     | LVCMOS33_IN   | PT3B  | SLEW:FAST                         |
+| ls_p0_led100n       | A2/0     | LVCMOS33_IN   | PT3A  | SLEW:FAST                         |
+| ls_p0_led10n        | B3/0     | LVCMOS33_IN   | PT2B  | SLEW:FAST                         |
+| ls_p1_led1000n      | A4/0     | LVCMOS33_IN   | PT5B  | SLEW:FAST                         |
+| ls_p1_led100n       | E7/0     | LVCMOS33_IN   | PT4C  | SLEW:FAST                         |
+| ls_p1_led10n        | E6/0     | LVCMOS33_IN   | PT4D  | SLEW:FAST                         |
+| ls_p2_led1000n      | F16/2    | LVCMOS33_IN   | PR6C  | SLEW:FAST                         |
+| ls_p2_led100n       | F15/2    | LVCMOS33_IN   | PR6B  | SLEW:FAST                         |
+| ls_p2_led10n        | E15/2    | LVCMOS33_IN   | PR6A  | SLEW:FAST                         |
+| ls_p3_led1000n      | M12/3    | LVCMOS33_IN   | PR14C | SLEW:FAST                         |
+| ls_p3_led100n       | N14/3    | LVCMOS33_IN   | PR14B | SLEW:FAST                         |
+| ls_p3_led10n        | N15/3    | LVCMOS33_IN   | PR14A | SLEW:FAST                         |
+| ls_p4_led1000n      | K12/3    | LVCMOS33_IN   | PR9D  | SLEW:FAST                         |
+| ls_p4_led100n       | J12/3    | LVCMOS33_IN   | PR9C  | SLEW:FAST                         |
+| ls_p4_led10n        | J16/3    | LVCMOS33_IN   | PR9B  | SLEW:FAST                         |
+| lwe0_n              | H13/2    | LVCMOS33_BIDI | PR7D  | DRIVE:8mA SLEW:FAST               |
+| n13000              | M13/3    | LVCMOS33_OUT  | PR14D | DRIVE:8mA SLEW:FAST               |
+| n13001              | E10/1    | LVCMOS33_OUT  | PT10C | DRIVE:8mA SLEW:FAST               |
+| pcb_id_0            | R8/5     | LVCMOS33_IN   | PB6D  | SLEW:FAST                         |
+| pcb_id_1            | P7/5     | LVCMOS33_IN   | PB6E  | SLEW:FAST                         |
+| pcb_id_2            | P8/5     | LVCMOS33_IN   | PB6F  | SLEW:FAST                         |
+| pcb_rev_0           | T8/5     | LVCMOS33_IN   | PB5C  | SLEW:FAST                         |
+| pcb_rev_1           | T7/5     | LVCMOS33_IN   | PB5D  | SLEW:FAST                         |
+| pcb_rev_2           | R7/5     | LVCMOS33_IN   | PB6C  | SLEW:FAST                         |
+| pcie_rstn           | M1/6     | LVCMOS33_OUT  | PL11B | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| pcie_sel            | M3/6     | LVCMOS33_OUT  | PL12B | DRIVE:8mA SLEW:FAST               |
+| pld_1588_clk_out    | C9/1     | LVCMOS33_OUT  | PT7E  | DRIVE:8mA SLEW:FAST               |
+| pld_1588_pulse_out1 | D10/1    | LVCMOS33_OUT  | PT8B  | DRIVE:8mA SLEW:FAST               |
+| pld_1588_pulse_out2 | A10/1    | LVCMOS33_OUT  | PT7C  | DRIVE:8mA SLEW:FAST               |
+| pld_clk             | A9/1     | LVCMOS33_IN   | PT7D  | SLEW:FAST                         |
+| pld_tsec1_tx_er     | B6/0     | LVCMOS33_OUT  | PT5E  | DRIVE:8mA SLEW:FAST               |
+| pld_tsec3_txd0      | C10/1    | LVCMOS33_OUT  | PT7F  | DRIVE:8mA SLEW:FAST               |
+| pld_tsec3_txd1      | B10/1    | LVCMOS33_OUT  | PT8D  | DRIVE:8mA SLEW:FAST               |
+| pld_tsec3_txd2      | C5/0     | LVCMOS33_OUT  | PT4B  | DRIVE:8mA SLEW:FAST               |
+| pld_uart1_sout      | D9/1     | LVCMOS33_OUT  | PT8A  | DRIVE:8mA SLEW:FAST               |
+| ps_ddr_pg           | R1/6     | LVCMOS33_IN   | PL13C | SLEW:FAST                         |
+| ps_vcore_pg         | N1/6     | LVCMOS33_IN   | PL11C | SLEW:FAST                         |
+| ready_p1            | R15/4    | LVCMOS33_OUT  | PB11A | DRIVE:8mA SLEW:FAST               |
+| rgmii_rstn          | M4/6     | LVCMOS33_OUT  | PL15B | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| rst_flsh_n          | R12/4    | LVCMOS33_OUT  | PB9B  | DRIVE:8mA SLEW:FAST               |
+| rst_pld_n           | G2/7     | LVCMOS33_IN   | PL6B  | SLEW:FAST                         |
+| sgmii_rstn          | M5/6     | LVCMOS33_OUT  | PL15A | DRIVE:8mA SLEW:FAST OPENDRAIN:ON  |
+| switch_1            | N16/3    | LVCMOS33_IN   | PR12D | SLEW:FAST                         |
+| switch_2            | M16/3    | LVCMOS33_IN   | PR12C | SLEW:FAST                         |
+| switch_3            | M15/3    | LVCMOS33_IN   | PR12B | SLEW:FAST                         |
+| switch_4            | L15/3    | LVCMOS33_IN   | PR12A | SLEW:FAST                         |
+| switch_5            | L16/3    | LVCMOS33_IN   | PR11D | SLEW:FAST                         |
+| switch_6            | K16/3    | LVCMOS33_IN   | PR11C | SLEW:FAST                         |
+| switch_8            | B11/1    | LVCMOS33_IN   | PT9A  | SLEW:FAST                         |
+| tdm_clk             | T14/4    | LVCMOS33_OUT  | PB10C | DRIVE:8mA SLEW:FAST               |
+| tdma_txd0           | A11/1    | LVCMOS33_OUT  | PT8E  | DRIVE:8mA SLEW:FAST               |
+| tdmd_uart1n         | N12/3    | LVCMOS33_OUT  | PR15B | DRIVE:8mA SLEW:FAST               |
+| wa_led_1            | N5/5     | LVCMOS33_IN   | PB2C  | SLEW:FAST                         |
+| wa_led_2            | N6/5     | LVCMOS33_IN   | PB2D  | SLEW:FAST                         |
+| wd_cfg_0            | T2/5     | LVCMOS33_OUT  | PB3A  | DRIVE:8mA SLEW:FAST               |
+| wd_cfg_1            | T3/5     | LVCMOS33_OUT  | PB3B  | DRIVE:8mA SLEW:FAST               |
+| wd_cfg_2            | R4/5     | LVCMOS33_OUT  | PB3C  | DRIVE:8mA SLEW:FAST               |
+| wd_in               | R5/5     | LVCMOS33_IN   | PB3D  | SLEW:FAST                         |
+| xresetn             | C11/1    | LVCMOS33_OUT  | PT9C  | DRIVE:8mA SLEW:FAST               |
++---------------------+----------+---------------+-------+-----------------------------------+
+
+Vccio by Bank:
++------+-------+
+| Bank | Vccio |
++------+-------+
+| 0    | 3.3V  |
+| 1    | 3.3V  |
+| 2    | 3.3V  |
+| 3    | 3.3V  |
+| 4    | 3.3V  |
+| 5    | 3.3V  |
+| 6    | 3.3V  |
+| 7    | 3.3V  |
++------+-------+
+
+Vref by Bank:
++------+-----+-----------------+---------+
+| Vref | Pin | Bank # / Vref # | Load(s) |
++------+-----+-----------------+---------+
++------+-----+-----------------+---------+
+
+Pinout by Pin Number:
++----------+---------------------+------------+---------------+-------+----------------+
+| Pin/Bank | Pin Info            | Preference | Buffer Type   | Site  | Dual Function  |
++----------+---------------------+------------+---------------+-------+----------------+
+| A2/0     | ls_p0_led100n       | LOCATED    | LVCMOS33_IN   | PT3A  |                |
+| A3/0     | ls_p0_led1000n      | LOCATED    | LVCMOS33_IN   | PT3B  | D1             |
+| A4/0     | ls_p1_led1000n      | LOCATED    | LVCMOS33_IN   | PT5B  | D3             |
+| A5/0     |     unused, PULL:UP |            |               | PT5A  |                |
+| A6/0     |     unused, PULL:UP |            |               | PT6A  |                |
+| A7/0     | fp_led_9            | LOCATED    | LVCMOS33_OUT  | PT6B  |                |
+| A9/1     | pld_clk             | LOCATED    | LVCMOS33_IN   | PT7D  | PCLKT1_1       |
+| A10/1    | pld_1588_pulse_out2 | LOCATED    | LVCMOS33_OUT  | PT7C  |                |
+| A11/1    | tdma_txd0           | LOCATED    | LVCMOS33_OUT  | PT8E  |                |
+| A12/1    |     unused, PULL:UP |            |               | PT8F  |                |
+| A13/1    | data_0              | LOCATED    | LVCMOS33_BIDI | PT9E  | D7             |
+| A14/1    | data_1              | LOCATED    | LVCMOS33_BIDI | PT9F  |                |
+| A15/1    | data_4              | LOCATED    | LVCMOS33_BIDI | PT11C |                |
+| B1/7     | cop_srst_n          | LOCATED    | LVCMOS33_IN   | PL5A  |                |
+| B2/0     | hrstreq_n           | LOCATED    | LVCMOS33_IN   | PT2A  |                |
+| B3/0     | ls_p0_led10n        | LOCATED    | LVCMOS33_IN   | PT2B  |                |
+| B4/0     | fp_led_5            | LOCATED    | LVCMOS33_OUT  | PT3E  |                |
+| B5/0     | fp_led_4            | LOCATED    | LVCMOS33_OUT  | PT3F  |                |
+| B6/0     | pld_tsec1_tx_er     | LOCATED    | LVCMOS33_OUT  | PT5E  |                |
+| B7/0     |     unused, PULL:UP |            |               | PT5F  |                |
+| B8/0     | fp_led_8            | LOCATED    | LVCMOS33_OUT  | PT6C  |                |
+| B9/1     |     unused, PULL:UP |            |               | PT8C  |                |
+| B10/1    | pld_tsec3_txd1      | LOCATED    | LVCMOS33_OUT  | PT8D  |                |
+| B11/1    | switch_8            | LOCATED    | LVCMOS33_IN   | PT9A  | D6             |
+| B12/1    |     unused, PULL:UP |            |               | PT9B  |                |
+| B13/1    | data_2              | LOCATED    | LVCMOS33_BIDI | PT10E |                |
+| B14/1    | data_3              | LOCATED    | LVCMOS33_BIDI | PT11A |                |
+| B15/1    | data_6              | LOCATED    | LVCMOS33_BIDI | PT11D |                |
+| B16/2    |     unused, PULL:UP |            |               | PR4C  |                |
+| C1/7     | cop_hrst_n          | LOCATED    | LVCMOS33_IN   | PL5B  |                |
+| C2/7     |     unused, PULL:UP |            |               | PL4D  |                |
+| C3/7     |     unused, PULL:UP |            |               | PL4C  |                |
+| C4/0     |     unused, PULL:UP |            |               | PT4A  |                |
+| C5/0     | pld_tsec3_txd2      | LOCATED    | LVCMOS33_OUT  | PT4B  | D2             |
+| C6/0     |     unused, PULL:UP |            |               | PT5C  |                |
+| C7/0     |     unused, PULL:UP |            |               | PT5D  |                |
+| C8/0     | fp_led_7            | LOCATED    | LVCMOS33_OUT  | PT6D  |                |
+| C9/1     | pld_1588_clk_out    | LOCATED    | LVCMOS33_OUT  | PT7E  |                |
+| C10/1    | pld_tsec3_txd0      | LOCATED    | LVCMOS33_OUT  | PT7F  |                |
+| C11/1    | xresetn             | LOCATED    | LVCMOS33_OUT  | PT9C  |                |
+| C12/1    |     unused, PULL:UP |            |               | PT9D  |                |
+| C13/1    |     unused, PULL:UP |            |               | PT10F |                |
+| C14/1    | data_7              | LOCATED    | LVCMOS33_BIDI | PT11B |                |
+| C15/2    | data_5              | LOCATED    | LVCMOS33_BIDI | PR5A  |                |
+| C16/2    | la29                | LOCATED    | LVCMOS33_BIDI | PR4D  |                |
+| D1/7     |     unused, PULL:UP |            |               | PL5D  |                |
+| D2/7     | cop_trst_n          | LOCATED    | LVCMOS33_IN   | PL5C  |                |
+| D3/0     |     unused, PULL:UP |            |               | PT2C  |                |
+| D4/0     |     unused, PULL:UP |            |               | PT2D  |                |
+| D5/0     | fp_led_6            | LOCATED    | LVCMOS33_OUT  | PT3D  |                |
+| D6/0     | iic2_ctl_1          | LOCATED    | LVCMOS33_OUT  | PT3C  |                |
+| D7/0     | clkin2m             | LOCATED    | LVCMOS33_IN   | PT6F  | PCLKT1_0       |
+| D8/0     |     unused, PULL:UP |            |               | PT6E  |                |
+| D9/1     | pld_uart1_sout      | LOCATED    | LVCMOS33_OUT  | PT8A  |                |
+| D10/1    | pld_1588_pulse_out1 | LOCATED    | LVCMOS33_OUT  | PT8B  |                |
+| D11/1    |     unused, PULL:UP |            |               | PT10A |                |
+| D12/1    |     unused, PULL:UP |            |               | PT10B |                |
+| D13/2    | la31                | LOCATED    | LVCMOS33_BIDI | PR2B  |                |
+| D14/2    | la27                | LOCATED    | LVCMOS33_BIDI | PR2A  |                |
+| D15/2    | la30                | LOCATED    | LVCMOS33_BIDI | PR5B  |                |
+| D16/2    | la28                | LOCATED    | LVCMOS33_IN   | PR5C  |                |
+| E1/7     |     unused, PULL:UP |            |               | PL6C  |                |
+| E2/7     |     unused, PULL:UP |            |               | PL4B  |                |
+| E3/7     |     unused, PULL:UP |            |               | PL4A  |                |
+| E4/7     |     unused, PULL:UP |            |               | PL2A  |                |
+| E5/7     | iic2_ctl_2          | LOCATED    | LVCMOS33_OUT  | PL2B  |                |
+| E6/0     | ls_p1_led10n        | LOCATED    | LVCMOS33_IN   | PT4D  |                |
+| E7/0     | ls_p1_led100n       | LOCATED    | LVCMOS33_IN   | PT4C  |                |
+| E8/1     |     unused, PULL:UP |            |               | PT7A  |                |
+| E9/1     |     unused, PULL:UP |            |               | PT7B  |                |
+| E10/1    | n13001              |            | LVCMOS33_OUT  | PT10C |                |
+| E11/1    |     unused, PULL:UP |            |               | PT10D |                |
+| E12/2    |     unused, PULL:UP |            |               | PR3B  |                |
+| E13/2    | la26                | LOCATED    | LVCMOS33_BIDI | PR3A  |                |
+| E14/2    | la23                | LOCATED    | LVCMOS33_OUT  | PR4A  |                |
+| E15/2    | ls_p2_led10n        | LOCATED    | LVCMOS33_IN   | PR6A  |                |
+| E16/2    | la24                | LOCATED    | LVCMOS33_OUT  | PR5D  |                |
+| F1/7     |     unused, PULL:UP |            |               | PL6D  |                |
+| F2/7     |     unused, PULL:UP |            |               | PL6A  |                |
+| F3/7     |     unused, PULL:UP |            |               | PL3C  |                |
+| F4/7     |     unused, PULL:UP |            |               | PL3D  |                |
+| F5/7     | iic2_ctl_3          | LOCATED    | LVCMOS33_OUT  | PL3A  |                |
+| F6/7     | iic2_ctl_4          | LOCATED    | LVCMOS33_OUT  | PL3B  |                |
+| F12/2    |     unused, PULL:UP |            |               | PR3D  |                |
+| F13/2    | lgpl2               | LOCATED    | LVCMOS33_BIDI | PR3C  |                |
+| F14/2    | la25                | LOCATED    | LVCMOS33_OUT  | PR4B  |                |
+| F15/2    | ls_p2_led100n       | LOCATED    | LVCMOS33_IN   | PR6B  |                |
+| F16/2    | ls_p2_led1000n      | LOCATED    | LVCMOS33_IN   | PR6C  |                |
+| G1/7     | eeprom_spi_sck      | LOCATED    | LVCMOS33_OUT  | PL8C  |                |
+| G2/7     | rst_pld_n           | LOCATED    | LVCMOS33_IN   | PL6B  | GSR_PADN       |
+| G3/7     |     unused, PULL:UP |            |               | PL7C  |                |
+| G4/7     |     unused, PULL:UP |            |               | PL7A  |                |
+| G5/7     |     unused, PULL:UP |            |               | PL7B  |                |
+| G12/2    | fp_led_11           | LOCATED    | LVCMOS33_OUT  | PR7A  |                |
+| G13/2    | cfg_strobe4a        | LOCATED    | LVCMOS33_OUT  | PR7B  |                |
+| G14/2    |     unused, PULL:UP |            |               | PR8A  |                |
+| G15/2    |     unused, PULL:UP |            |               | PR8C  |                |
+| G16/2    | fp_led_12           | LOCATED    | LVCMOS33_OUT  | PR6D  |                |
+| H1/7     | eeprom_spi_si       | LOCATED    | LVCMOS33_OUT  | PL8D  |                |
+| H2/6     | fxs_led_0           | LOCATED    | LVCMOS33_OUT  | PL9A  |                |
+| H3/7     |     unused, PULL:UP |            |               | PL7D  |                |
+| H4/7     | eeprom_spi_cs_n     | LOCATED    | LVCMOS33_OUT  | PL8A  |                |
+| H5/7     |     unused, PULL:UP |            |               | PL8B  |                |
+| H12/2    | load_default_n      | LOCATED    | LVCMOS33_OUT  | PR7C  |                |
+| H13/2    | lwe0_n              | LOCATED    | LVCMOS33_BIDI | PR7D  |                |
+| H14/2    | la16                | LOCATED    | LVCMOS33_OUT  | PR8B  |                |
+| H15/2    | fp_led_10           | LOCATED    | LVCMOS33_OUT  | PR8D  |                |
+| H16/3    |     unused, PULL:UP |            |               | PR9A  |                |
+| J1/6     | fxs_led_2           | LOCATED    | LVCMOS33_OUT  | PL10A |                |
+| J2/6     | fxs_led_1           | LOCATED    | LVCMOS33_OUT  | PL9B  |                |
+| J3/6     | front_led_intensity | LOCATED    | LVCMOS33_IN   | PL9C  |                |
+| J4/6     | i2c1_en_cpld        | LOCATED    | LVCMOS33_OUT  | PL13A |                |
+| J5/6     | i2c1_en_cpu         | LOCATED    | LVCMOS33_OUT  | PL13B |                |
+| J12/3    | ls_p4_led100n       | LOCATED    | LVCMOS33_IN   | PR9C  |                |
+| J13/3    | fp_led_16           | LOCATED    | LVCMOS33_OUT  | PR11A |                |
+| J14/3    | fp_led_18           | LOCATED    | LVCMOS33_OUT  | PR10C |                |
+| J15/3    | fbank_select        | LOCATED    | LVCMOS33_IN   | PR10A |                |
+| J16/3    | ls_p4_led10n        | LOCATED    | LVCMOS33_IN   | PR9B  |                |
+| K1/6     | fxs_led_3           | LOCATED    | LVCMOS33_OUT  | PL10B |                |
+| K2/6     | fp_status_led_3     | LOCATED    | LVCMOS33_OUT  | PL10C |                |
+| K3/6     | bps_fxo_led2        | LOCATED    | LVCMOS33_OUT  | PL9D  |                |
+| K4/6     |     unused, PULL:UP |            |               | PL14B | LLM0_PLLC_FB_A |
+| K5/6     |     unused, PULL:UP |            |               | PL14A | LLM0_PLLT_FB_A |
+| K12/3    | ls_p4_led1000n      | LOCATED    | LVCMOS33_IN   | PR9D  |                |
+| K13/3    |     unused, PULL:UP |            |               | PR11B |                |
+| K14/3    | fp_led_17           | LOCATED    | LVCMOS33_OUT  | PR10D |                |
+| K15/3    | lcs3_n              | LOCATED    | LVCMOS33_IN   | PR10B |                |
+| K16/3    | switch_6            | LOCATED    | LVCMOS33_IN   | PR11C |                |
+| L1/6     | fp_power_led_3      | LOCATED    | LVCMOS33_OUT  | PL11A |                |
+| L2/6     | bps_fxo_led1        | LOCATED    | LVCMOS33_OUT  | PL10D |                |
+| L3/6     |     unused, PULL:UP |            |               | PL12A |                |
+| L4/6     |     unused, PULL:UP |            |               | PL14D |                |
+| L5/6     |     unused, PULL:UP |            |               | PL14C |                |
+| L11/3    | fp_led_14           | LOCATED    | LVCMOS33_OUT  | PR16A |                |
+| L12/3    |     unused, PULL:UP |            |               | PR13C |                |
+| L13/3    |     unused, PULL:UP |            |               | PR13D |                |
+| L14/3    | cfg_strobe2a        | LOCATED    | LVCMOS33_OUT  | PR13A |                |
+| L15/3    | switch_4            | LOCATED    | LVCMOS33_IN   | PR12A |                |
+| L16/3    | switch_5            | LOCATED    | LVCMOS33_IN   | PR11D |                |
+| M1/6     | pcie_rstn           | LOCATED    | LVCMOS33_OUT  | PL11B |                |
+| M2/6     | cpld_i2c1_sda       | LOCATED    | LVCMOS33_OUT  | PL12C |                |
+| M3/6     | pcie_sel            | LOCATED    | LVCMOS33_OUT  | PL12B |                |
+| M4/6     | rgmii_rstn          | LOCATED    | LVCMOS33_OUT  | PL15B | LLM0_PLLC_IN_A |
+| M5/6     | sgmii_rstn          | LOCATED    | LVCMOS33_OUT  | PL15A | LLM0_PLLT_IN_A |
+| M7/5     |     unused, PULL:UP |            |               | PB6A  |                |
+| M8/5     | fp_led_3            | LOCATED    | LVCMOS33_OUT  | PB6B  |                |
+| M9/4     | clkin66             | LOCATED    | LVCMOS33_IN   | PB7F  | PCLKT4_0       |
+| M10/4    | fp_power_led_1      | LOCATED    | LVCMOS33_OUT  | PB7E  |                |
+| M11/3    | fp_led_13           | LOCATED    | LVCMOS33_OUT  | PR16B |                |
+| M12/3    | ls_p3_led1000n      | LOCATED    | LVCMOS33_IN   | PR14C |                |
+| M13/3    | n13000              |            | LVCMOS33_OUT  | PR14D |                |
+| M14/3    | cfg_strobe2         | LOCATED    | LVCMOS33_OUT  | PR13B |                |
+| M15/3    | switch_3            | LOCATED    | LVCMOS33_IN   | PR12B |                |
+| M16/3    | switch_2            | LOCATED    | LVCMOS33_IN   | PR12C |                |
+| N1/6     | ps_vcore_pg         | LOCATED    | LVCMOS33_IN   | PL11C | TSALLPAD       |
+| N2/6     | cpld_i2c1_scl       | LOCATED    | LVCMOS33_OUT  | PL12D |                |
+| N3/6     | cfg_cpu_vdd_1       | LOCATED    | LVCMOS33_OUT  | PL16B |                |
+| N4/6     | cfg_cpu_vdd_0       | LOCATED    | LVCMOS33_OUT  | PL16A |                |
+| N5/5     | wa_led_1            | LOCATED    | LVCMOS33_IN   | PB2C  |                |
+| N6/5     | wa_led_2            | LOCATED    | LVCMOS33_IN   | PB2D  |                |
+| N8/4     |     unused, PULL:UP |            |               | PB7A  |                |
+| N9/4     |     unused, PULL:UP |            |               | PB7B  | PCLKT4_1       |
+| N10/4    |     unused, PULL:UP |            |               | PB8E  |                |
+| N11/4    |     unused, PULL:UP |            |               | PB8F  |                |
+| N12/3    | tdmd_uart1n         | LOCATED    | LVCMOS33_OUT  | PR15B |                |
+| N13/3    | fp_led_15           | LOCATED    | LVCMOS33_OUT  | PR15A |                |
+| N14/3    | ls_p3_led100n       | LOCATED    | LVCMOS33_IN   | PR14B |                |
+| N15/3    | ls_p3_led10n        | LOCATED    | LVCMOS33_IN   | PR14A |                |
+| N16/3    | switch_1            | LOCATED    | LVCMOS33_IN   | PR12D |                |
+| P1/6     | ctl_vcore_en        | LOCATED    | LVCMOS33_OUT  | PL11D |                |
+| P2/5     | fp_led_1            | LOCATED    | LVCMOS33_OUT  | PB2A  |                |
+| P3/5     | fp_led_2            | LOCATED    | LVCMOS33_OUT  | PB2B  |                |
+| P5/5     |     unused, PULL:UP |            |               | PB4A  |                |
+| P6/5     |     unused, PULL:UP |            |               | PB4B  |                |
+| P7/5     | pcb_id_1            | LOCATED    | LVCMOS33_IN   | PB6E  |                |
+| P8/5     | pcb_id_2            | LOCATED    | LVCMOS33_IN   | PB6F  |                |
+| P9/4     | fp_status_led_2     | LOCATED    | LVCMOS33_OUT  | PB7C  |                |
+| P10/4    | fp_status_led_1     | LOCATED    | LVCMOS33_OUT  | PB7D  |                |
+| P11/4    | fbank_sel_256m      | LOCATED    | LVCMOS33_OUT  | PB9C  |                |
+| P12/4    | gvdd_pwr_on2        | LOCATED    | LVCMOS33_OUT  | PB9D  |                |
+| P14/4    | fbank_sel_512m      | LOCATED    | LVCMOS33_OUT  | PB10F |                |
+| P15/4    |     unused, PULL:UP |            |               | PB11C |                |
+| P16/4    |     unused, PULL:UP |            |               | PB11D |                |
+| PB10E/0  |     unused, PULL:UP |            |               | PB10E |                |
+| R1/6     | ps_ddr_pg           | LOCATED    | LVCMOS33_IN   | PL13C |                |
+| R2/6     | gvdd_pwr_on         | LOCATED    | LVCMOS33_OUT  | PL13D |                |
+| R4/5     | wd_cfg_2            | LOCATED    | LVCMOS33_OUT  | PB3C  |                |
+| R5/5     | wd_in               | LOCATED    | LVCMOS33_IN   | PB3D  |                |
+| R6/5     | cpu_fan_tach        | LOCATED    | LVCMOS33_IN   | PB5A  |                |
+| R7/5     | pcb_rev_2           | LOCATED    | LVCMOS33_IN   | PB6C  |                |
+| R8/5     | pcb_id_0            | LOCATED    | LVCMOS33_IN   | PB6D  |                |
+| R9/4     | fp_power_led_2      | LOCATED    | LVCMOS33_OUT  | PB8A  |                |
+| R10/4    | lale2               | LOCATED    | LVCMOS33_OUT  | PB8B  |                |
+| R11/4    | lbctl               | LOCATED    | LVCMOS33_OUT  | PB9A  |                |
+| R12/4    | rst_flsh_n          | LOCATED    | LVCMOS33_OUT  | PB9B  |                |
+| R13/4    | cpu_srst_n          | LOCATED    | LVCMOS33_OUT  | PB10A |                |
+| R14/4    | cpu_hrst_n          | LOCATED    | LVCMOS33_OUT  | PB10B |                |
+| R15/4    | ready_p1            | LOCATED    | LVCMOS33_OUT  | PB11A |                |
+| R16/4    | cpu_trst_n          | LOCATED    | LVCMOS33_OUT  | PB11B |                |
+| T2/5     | wd_cfg_0            | LOCATED    | LVCMOS33_OUT  | PB3A  |                |
+| T3/5     | wd_cfg_1            | LOCATED    | LVCMOS33_OUT  | PB3B  |                |
+| T4/5     | ddr_rst_n           | LOCATED    | LVCMOS33_OUT  | PB4D  |                |
+| T5/5     | cpu_fan_pwm         | LOCATED    | LVCMOS33_OUT  | PB4C  |                |
+| T6/5     | geth_sw_rst_n       | LOCATED    | LVCMOS33_OUT  | PB5B  |                |
+| T7/5     | pcb_rev_1           | LOCATED    | LVCMOS33_IN   | PB5D  |                |
+| T8/5     | pcb_rev_0           | LOCATED    | LVCMOS33_IN   | PB5C  |                |
+| T10/4    | bps_out             | LOCATED    | LVCMOS33_OUT  | PB8C  |                |
+| T11/4    | cfg_drv2_n          | LOCATED    | LVCMOS33_OUT  | PB8D  |                |
+| T12/4    | boot_sel            | LOCATED    | LVCMOS33_OUT  | PB9F  |                |
+| T13/4    | fbank_sel_128m      | LOCATED    | LVCMOS33_OUT  | PB9E  |                |
+| T14/4    | tdm_clk             | LOCATED    | LVCMOS33_OUT  | PB10C |                |
+| T15/4    | dma1_ddone_n        | LOCATED    | LVCMOS33_OUT  | PB10D |                |
+| TCK/5    |                     |            |               | TCK   | TCK            |
+| TDI/5    |                     |            |               | TDI   | TDI            |
+| TDO/5    |                     |            |               | TDO   | TDO            |
+| TMS/5    |                     |            |               | TMS   | TMS            |
++----------+---------------------+------------+---------------+-------+----------------+
+
+
+Locate Preferences for each Pin: 
+
+LOCATE  COMP  "boot_sel"  SITE  "T12";
+LOCATE  COMP  "bps_fxo_led1"  SITE  "L2";
+LOCATE  COMP  "bps_fxo_led2"  SITE  "K3";
+LOCATE  COMP  "bps_out"  SITE  "T10";
+LOCATE  COMP  "cfg_cpu_vdd_0"  SITE  "N4";
+LOCATE  COMP  "cfg_cpu_vdd_1"  SITE  "N3";
+LOCATE  COMP  "cfg_drv2_n"  SITE  "T11";
+LOCATE  COMP  "cfg_strobe2"  SITE  "M14";
+LOCATE  COMP  "cfg_strobe2a"  SITE  "L14";
+LOCATE  COMP  "cfg_strobe4a"  SITE  "G13";
+LOCATE  COMP  "clkin2m"  SITE  "D7";
+LOCATE  COMP  "clkin66"  SITE  "M9";
+LOCATE  COMP  "cop_hrst_n"  SITE  "C1";
+LOCATE  COMP  "cop_srst_n"  SITE  "B1";
+LOCATE  COMP  "cop_trst_n"  SITE  "D2";
+LOCATE  COMP  "cpld_i2c1_scl"  SITE  "N2";
+LOCATE  COMP  "cpld_i2c1_sda"  SITE  "M2";
+LOCATE  COMP  "cpu_fan_pwm"  SITE  "T5";
+LOCATE  COMP  "cpu_fan_tach"  SITE  "R6";
+LOCATE  COMP  "cpu_hrst_n"  SITE  "R14";
+LOCATE  COMP  "cpu_srst_n"  SITE  "R13";
+LOCATE  COMP  "cpu_trst_n"  SITE  "R16";
+LOCATE  COMP  "ctl_vcore_en"  SITE  "P1";
+LOCATE  COMP  "data_0"  SITE  "A13";
+LOCATE  COMP  "data_1"  SITE  "A14";
+LOCATE  COMP  "data_2"  SITE  "B13";
+LOCATE  COMP  "data_3"  SITE  "B14";
+LOCATE  COMP  "data_4"  SITE  "A15";
+LOCATE  COMP  "data_5"  SITE  "C15";
+LOCATE  COMP  "data_6"  SITE  "B15";
+LOCATE  COMP  "data_7"  SITE  "C14";
+LOCATE  COMP  "ddr_rst_n"  SITE  "T4";
+LOCATE  COMP  "dma1_ddone_n"  SITE  "T15";
+LOCATE  COMP  "eeprom_spi_cs_n"  SITE  "H4";
+LOCATE  COMP  "eeprom_spi_sck"  SITE  "G1";
+LOCATE  COMP  "eeprom_spi_si"  SITE  "H1";
+LOCATE  COMP  "fbank_sel_128m"  SITE  "T13";
+LOCATE  COMP  "fbank_sel_256m"  SITE  "P11";
+LOCATE  COMP  "fbank_sel_512m"  SITE  "P14";
+LOCATE  COMP  "fbank_select"  SITE  "J15";
+LOCATE  COMP  "fp_led_1"  SITE  "P2";
+LOCATE  COMP  "fp_led_10"  SITE  "H15";
+LOCATE  COMP  "fp_led_11"  SITE  "G12";
+LOCATE  COMP  "fp_led_12"  SITE  "G16";
+LOCATE  COMP  "fp_led_13"  SITE  "M11";
+LOCATE  COMP  "fp_led_14"  SITE  "L11";
+LOCATE  COMP  "fp_led_15"  SITE  "N13";
+LOCATE  COMP  "fp_led_16"  SITE  "J13";
+LOCATE  COMP  "fp_led_17"  SITE  "K14";
+LOCATE  COMP  "fp_led_18"  SITE  "J14";
+LOCATE  COMP  "fp_led_2"  SITE  "P3";
+LOCATE  COMP  "fp_led_3"  SITE  "M8";
+LOCATE  COMP  "fp_led_4"  SITE  "B5";
+LOCATE  COMP  "fp_led_5"  SITE  "B4";
+LOCATE  COMP  "fp_led_6"  SITE  "D5";
+LOCATE  COMP  "fp_led_7"  SITE  "C8";
+LOCATE  COMP  "fp_led_8"  SITE  "B8";
+LOCATE  COMP  "fp_led_9"  SITE  "A7";
+LOCATE  COMP  "fp_power_led_1"  SITE  "M10";
+LOCATE  COMP  "fp_power_led_2"  SITE  "R9";
+LOCATE  COMP  "fp_power_led_3"  SITE  "L1";
+LOCATE  COMP  "fp_status_led_1"  SITE  "P10";
+LOCATE  COMP  "fp_status_led_2"  SITE  "P9";
+LOCATE  COMP  "fp_status_led_3"  SITE  "K2";
+LOCATE  COMP  "front_led_intensity"  SITE  "J3";
+LOCATE  COMP  "fxs_led_0"  SITE  "H2";
+LOCATE  COMP  "fxs_led_1"  SITE  "J2";
+LOCATE  COMP  "fxs_led_2"  SITE  "J1";
+LOCATE  COMP  "fxs_led_3"  SITE  "K1";
+LOCATE  COMP  "geth_sw_rst_n"  SITE  "T6";
+LOCATE  COMP  "gvdd_pwr_on"  SITE  "R2";
+LOCATE  COMP  "gvdd_pwr_on2"  SITE  "P12";
+LOCATE  COMP  "hrstreq_n"  SITE  "B2";
+LOCATE  COMP  "i2c1_en_cpld"  SITE  "J4";
+LOCATE  COMP  "i2c1_en_cpu"  SITE  "J5";
+LOCATE  COMP  "iic2_ctl_1"  SITE  "D6";
+LOCATE  COMP  "iic2_ctl_2"  SITE  "E5";
+LOCATE  COMP  "iic2_ctl_3"  SITE  "F5";
+LOCATE  COMP  "iic2_ctl_4"  SITE  "F6";
+LOCATE  COMP  "la16"  SITE  "H14";
+LOCATE  COMP  "la23"  SITE  "E14";
+LOCATE  COMP  "la24"  SITE  "E16";
+LOCATE  COMP  "la25"  SITE  "F14";
+LOCATE  COMP  "la26"  SITE  "E13";
+LOCATE  COMP  "la27"  SITE  "D14";
+LOCATE  COMP  "la28"  SITE  "D16";
+LOCATE  COMP  "la29"  SITE  "C16";
+LOCATE  COMP  "la30"  SITE  "D15";
+LOCATE  COMP  "la31"  SITE  "D13";
+LOCATE  COMP  "lale2"  SITE  "R10";
+LOCATE  COMP  "lbctl"  SITE  "R11";
+LOCATE  COMP  "lcs3_n"  SITE  "K15";
+LOCATE  COMP  "lgpl2"  SITE  "F13";
+LOCATE  COMP  "load_default_n"  SITE  "H12";
+LOCATE  COMP  "ls_p0_led1000n"  SITE  "A3";
+LOCATE  COMP  "ls_p0_led100n"  SITE  "A2";
+LOCATE  COMP  "ls_p0_led10n"  SITE  "B3";
+LOCATE  COMP  "ls_p1_led1000n"  SITE  "A4";
+LOCATE  COMP  "ls_p1_led100n"  SITE  "E7";
+LOCATE  COMP  "ls_p1_led10n"  SITE  "E6";
+LOCATE  COMP  "ls_p2_led1000n"  SITE  "F16";
+LOCATE  COMP  "ls_p2_led100n"  SITE  "F15";
+LOCATE  COMP  "ls_p2_led10n"  SITE  "E15";
+LOCATE  COMP  "ls_p3_led1000n"  SITE  "M12";
+LOCATE  COMP  "ls_p3_led100n"  SITE  "N14";
+LOCATE  COMP  "ls_p3_led10n"  SITE  "N15";
+LOCATE  COMP  "ls_p4_led1000n"  SITE  "K12";
+LOCATE  COMP  "ls_p4_led100n"  SITE  "J12";
+LOCATE  COMP  "ls_p4_led10n"  SITE  "J16";
+LOCATE  COMP  "lwe0_n"  SITE  "H13";
+LOCATE  COMP  "n13000"  SITE  "M13";
+LOCATE  COMP  "n13001"  SITE  "E10";
+LOCATE  COMP  "pcb_id_0"  SITE  "R8";
+LOCATE  COMP  "pcb_id_1"  SITE  "P7";
+LOCATE  COMP  "pcb_id_2"  SITE  "P8";
+LOCATE  COMP  "pcb_rev_0"  SITE  "T8";
+LOCATE  COMP  "pcb_rev_1"  SITE  "T7";
+LOCATE  COMP  "pcb_rev_2"  SITE  "R7";
+LOCATE  COMP  "pcie_rstn"  SITE  "M1";
+LOCATE  COMP  "pcie_sel"  SITE  "M3";
+LOCATE  COMP  "pld_1588_clk_out"  SITE  "C9";
+LOCATE  COMP  "pld_1588_pulse_out1"  SITE  "D10";
+LOCATE  COMP  "pld_1588_pulse_out2"  SITE  "A10";
+LOCATE  COMP  "pld_clk"  SITE  "A9";
+LOCATE  COMP  "pld_tsec1_tx_er"  SITE  "B6";
+LOCATE  COMP  "pld_tsec3_txd0"  SITE  "C10";
+LOCATE  COMP  "pld_tsec3_txd1"  SITE  "B10";
+LOCATE  COMP  "pld_tsec3_txd2"  SITE  "C5";
+LOCATE  COMP  "pld_uart1_sout"  SITE  "D9";
+LOCATE  COMP  "ps_ddr_pg"  SITE  "R1";
+LOCATE  COMP  "ps_vcore_pg"  SITE  "N1";
+LOCATE  COMP  "ready_p1"  SITE  "R15";
+LOCATE  COMP  "rgmii_rstn"  SITE  "M4";
+LOCATE  COMP  "rst_flsh_n"  SITE  "R12";
+LOCATE  COMP  "rst_pld_n"  SITE  "G2";
+LOCATE  COMP  "sgmii_rstn"  SITE  "M5";
+LOCATE  COMP  "switch_1"  SITE  "N16";
+LOCATE  COMP  "switch_2"  SITE  "M16";
+LOCATE  COMP  "switch_3"  SITE  "M15";
+LOCATE  COMP  "switch_4"  SITE  "L15";
+LOCATE  COMP  "switch_5"  SITE  "L16";
+LOCATE  COMP  "switch_6"  SITE  "K16";
+LOCATE  COMP  "switch_8"  SITE  "B11";
+LOCATE  COMP  "tdm_clk"  SITE  "T14";
+LOCATE  COMP  "tdma_txd0"  SITE  "A11";
+LOCATE  COMP  "tdmd_uart1n"  SITE  "N12";
+LOCATE  COMP  "wa_led_1"  SITE  "N5";
+LOCATE  COMP  "wa_led_2"  SITE  "N6";
+LOCATE  COMP  "wd_cfg_0"  SITE  "T2";
+LOCATE  COMP  "wd_cfg_1"  SITE  "T3";
+LOCATE  COMP  "wd_cfg_2"  SITE  "R4";
+LOCATE  COMP  "wd_in"  SITE  "R5";
+LOCATE  COMP  "xresetn"  SITE  "C11";
+
+
+
+
+
+PAR: Place And Route Diamond (64-bit) 2.2.0.101.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 06 10:52:18 2014
+

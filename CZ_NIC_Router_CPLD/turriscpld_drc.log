@@ -1,0 +1,50 @@
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00e/data/mj5gelib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00/data/mj5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'switch_7' has no load
+WARNING - synthesis: input pad net 'switch_7' has no legal load
+WARNING - synthesis: logical net 'cpu_temp_alert_n' has no load
+WARNING - synthesis: input pad net 'cpu_temp_alert_n' has no legal load
+WARNING - synthesis: logical net 'cpu_temp_crit_n' has no load
+WARNING - synthesis: input pad net 'cpu_temp_crit_n' has no legal load
+WARNING - synthesis: logical net 'eeprom_spi_so' has no load
+WARNING - synthesis: input pad net 'eeprom_spi_so' has no legal load
+WARNING - synthesis: logical net 'ps_1v50_pcie_pgood' has no load
+WARNING - synthesis: input pad net 'ps_1v50_pcie_pgood' has no legal load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'add_140_8/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_8/CO1' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'add_140_14/CO0' has no load
+WARNING - synthesis: logical net 'add_140_6/CO0' has no load
+WARNING - synthesis: logical net 'add_140_12/CO0' has no load
+WARNING - synthesis: logical net 'add_140_4/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_12/CO1' has no load
+WARNING - synthesis: logical net 'add_140_2/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_10/CO0' has no load
+WARNING - synthesis: logical net 'add_140_10/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'add_140_18/CO0' has no load
+WARNING - synthesis: logical net 'add_140_18/CO1' has no load
+WARNING - synthesis: logical net 'add_140_16/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_8/CO1' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_6/CO0' has no load
+WARNING - synthesis: DRC complete with 37 warnings
+
+Design Results:
+   1322 blocks expanded
+completed the first expansion

@@ -1,0 +1,26 @@
+----------------------------------------------------------------------
+Report for cell turriscpld.<NoName>
+Register bits:  297 of 1200 (24.750%)
+I/O cells:      153
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB        15          100.0
+                               CCU2        23          100.0
+                            FD1P3AX        82          100.0
+                            FD1P3AY       113          100.0
+                            FD1P3DX         1          100.0
+                            FD1P3IX        18          100.0
+                             FD1S1A         4          100.0
+                             FD1S1I         4          100.0
+                            FD1S3AX        37          100.0
+                            FD1S3AY         8          100.0
+                            FD1S3DX         6          100.0
+                            FD1S3IX        24          100.0
+                                GSR         1          100.0
+                                 IB        46          100.0
+                            L6MUX21        17          100.0
+                                 OB        58          100.0
+                                OBZ        34          100.0
+                           ORCALUT4       716          100.0
+                              PFUMX       112          100.0
+                              TOTAL      1319

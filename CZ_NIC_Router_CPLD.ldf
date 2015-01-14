@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="2.0" title="CZ_NIC_Router_CPLD" device="LCMXO1200C-3FT256C" synthesis="lse" default_implementation="CZ_NIC_Router_CPLD">
+    <Options/>
+    <Implementation title="CZ_NIC_Router_CPLD" dir="CZ_NIC_Router_CPLD" description="CZ_NIC_Router_CPLD" default_strategy="Strategy1">
+        <Options def_top="turriscpld"/>
+        <Source name="CZ_NIC_Router_CPLD.v" type="Verilog" type_short="Verilog">
+            <Options top_module="turriscpld"/>
+        </Source>
+        <Source name="CZ_NIC_Router_CPLD.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="CZ_NIC_Router_CPLD/CZ_NIC_Router_CPLD.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="CZ_NIC_Router_CPLD/CZ_NIC_Router_CPLD_display_id.xcf" type="Programming Project File" type_short="Programming" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="CZ_NIC_Router_CPLD/CZ_NIC_Router_CPLD_erase.xcf" type="Programming Project File" type_short="Programming" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="CZ_NIC_Router_CPLD/CZ_NIC_Router_CPLD_program.xcf" type="Programming Project File" type_short="Programming" excluded="TRUE">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="CZ_NIC_Router_CPLD1.sty"/>
+</BaliProject>

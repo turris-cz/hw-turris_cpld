@@ -1,0 +1,197 @@
+synthesis:  version Diamond (64-bit) 2.2.0.101
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 06 10:52:08 2014
+
+
+Command Line:  synthesis -f CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_lattice.synproj 
+
+-- all messages logged in file synthesis.log
+INFO: Synthesis Options: (LSE-1022)
+INFO: -a option is = MachXO
+INFO: -s option is = 3
+INFO: -t option is = FTBGA256
+INFO: -d option is = LCMXO1200C
+INFO: Using package FTBGA256
+INFO: Using performance grade 3
+INFO:                                                           
+INFO: ##########################################################
+INFO: ### Lattice Family : MachXOE
+INFO: ### Device  : LCMXO1200C
+INFO: ### Package : FTBGA256
+INFO: ### Speed   : 3
+INFO: ##########################################################
+INFO:                                                           
+INFO: Optimization Goal = Balanced
+INFO: Top level module name = turriscpld
+INFO: Target Frequency = 200.000000 MHz
+INFO: Max Fanout = 1000
+INFO: Timing Path count = 3
+INFO: bram Utilization = 100.000000 %
+INFO: dsp usage = TRUE (default)
+INFO: dsp utilization = 100 (default)
+INFO: fsm_encoding_style = auto
+INFO: resolve_mixed_drivers = 0
+INFO: fix_gated_clocks = 1
+INFO: Mux style = Auto
+INFO: Use Carry Chain = TRUE
+INFO: carry_chain_length = 0
+INFO: Use IO Insertion = TRUE
+INFO: Use IO Reg = TRUE
+INFO: Resource Sharing = TRUE
+INFO: Propagate Constants = TRUE
+INFO: Remove Duplicate Registers = TRUE
+INFO: force_gsr = auto
+INFO: ROM style = auto
+INFO: RAM style = auto
+INFO: -comp option is FALSE
+INFO: -syn option is FALSE
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001 (searchpath added)
+INFO: -p D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00/data (searchpath added)
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD (searchpath added)
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001 (searchpath added)
+INFO: Verilog design file = H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD.v
+INFO: Ngd file = CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd
+INFO: -sdc option: sdc file input not used
+INFO: -lpf option: output file option is ON
+INFO: hardtimer checking is enabled (default); -dt option not used
+INFO: -r option is OFF [ Remove LOC Properties is OFF ]
+-- Technology check ok...MachXO, MachXO2...
+INFO: ** Recompile design **
+-- Technology check ok...MachXO, MachXO2...
+INFO: Compile Design Begin
+h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(23): INFO: compiling module turriscpld (VERI-1018)
+INFO: Top level module name = turriscpld
+INFO: ######## Converting i/o port : cpld_i2c1_sda to OUTPUT ... (LSE-1067)
+INFO: ######## Missing driver on net : n3018, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3017, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3016, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3019, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3020, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3021, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3022, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3023, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3024, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3025, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3026, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3027, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3028, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3029, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3030, patching with GND... (LSE-1017)
+
+
+h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(1310): WARNING: Latch dlatchrs_1080_i4 input is stuck at Zero
+h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(978): WARNING: Bit 0 of Register current_state is stuck at Zero (VDB-5010)
+INFO: GSR Instance connected to net: tdmd_uart1n_c_c (LSE-1149)
+WARNING: No user sdc file!
+INFO: Applying 200.000000 MHz constraint to all clocks (LSE-5000)
+INFO: Results of ngd drc checks are available in turriscpld_drc.log
+INFO: All blocks are expanded and NGD expansion is successful
+INFO: Writing ngd file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd
+
+################### Begin Area Report (turriscpld)######################
+Number of register bits => 297 of 1200 (24 % )
+BB => 15
+CCU2 => 23
+FD1P3AX => 82
+FD1P3AY => 113
+FD1P3DX => 1
+FD1P3IX => 18
+FD1S1A => 4
+FD1S1I => 4
+FD1S3AX => 37
+FD1S3AY => 8
+FD1S3DX => 6
+FD1S3IX => 24
+GSR => 1
+IB => 46
+L6MUX21 => 17
+OB => 58
+OBZ => 34
+ORCALUT4 => 716
+PFUMX => 112
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 10
+  Net : lwe0_n_out, loads : 184
+  Net : pld_clk_c, loads : 53
+  Net : clkin66_c, loads : 16
+  Net : intensity_button_debounce_clock, loads : 10
+  Net : n1300, loads : 9
+  Net : mixed_rgb_intensity_pwm_clock, loads : 9
+  Net : color_pwm_clock, loads : 9
+  Net : n4798, loads : 5
+  Net : n1428, loads : 4
+  Net : n1214, loads : 3
+Clock Enable Nets
+Number of Clock Enables: 38
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : la31_out, loads : 113
+  Net : la30_out, loads : 69
+  Net : la29_out, loads : 68
+  Net : la28_c, loads : 49
+  Net : color_pwm_counter_7, loads : 37
+  Net : color_pwm_counter_6, loads : 37
+  Net : mixed_rgb_intensity_level_0, loads : 36
+  Net : data_out_0, loads : 28
+  Net : switch_c_4, loads : 25
+  Net : switch_c_3, loads : 25
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk8 [get_nets                          |             |             |
+mixed_rgb_intensity_pwm_clock]          |  200.000 MHz|  347.584 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk7 [get_nets color_pwm_clock]         |  200.000 MHz|  293.169 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk6 [get_nets                          |             |             |
+intensity_button_debounce_clock]        |  200.000 MHz|  197.006 MHz|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk5 [get_nets lgpl2_out]               |  200.000 MHz|  192.456 MHz|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets n4798]                   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets n1214]                   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets lwe0_n_out]              |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clkin66_c]               |  200.000 MHz|  231.107 MHz|     3  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets pld_clk_c]               |  200.000 MHz|   77.924 MHz|    10 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 61.711  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.886  secs
+--------------------------------------------------------------

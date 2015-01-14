@@ -1,0 +1,906 @@
+
+synthesis -f "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_lattice.synproj"
+synthesis:  version Diamond (64-bit) 2.2.0.101
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 06 10:52:08 2014
+
+
+Command Line:  synthesis -f CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_lattice.synproj 
+
+-- all messages logged in file synthesis.log
+INFO: Synthesis Options: (LSE-1022)
+INFO: -a option is = MachXO
+INFO: -s option is = 3
+INFO: -t option is = FTBGA256
+INFO: -d option is = LCMXO1200C
+INFO: Using package FTBGA256
+INFO: Using performance grade 3
+INFO:                                                           
+INFO: ##########################################################
+INFO: ### Lattice Family : MachXOE
+INFO: ### Device  : LCMXO1200C
+INFO: ### Package : FTBGA256
+INFO: ### Speed   : 3
+INFO: ##########################################################
+INFO:                                                           
+INFO: Optimization Goal = Balanced
+INFO: Top level module name = turriscpld
+INFO: Target Frequency = 200.000000 MHz
+INFO: Max Fanout = 1000
+INFO: Timing Path count = 3
+INFO: bram Utilization = 100.000000 %
+INFO: dsp usage = TRUE (default)
+INFO: dsp utilization = 100 (default)
+INFO: fsm_encoding_style = auto
+INFO: resolve_mixed_drivers = 0
+INFO: fix_gated_clocks = 1
+INFO: Mux style = Auto
+INFO: Use Carry Chain = TRUE
+INFO: carry_chain_length = 0
+INFO: Use IO Insertion = TRUE
+INFO: Use IO Reg = TRUE
+INFO: Resource Sharing = TRUE
+INFO: Propagate Constants = TRUE
+INFO: Remove Duplicate Registers = TRUE
+INFO: force_gsr = auto
+INFO: ROM style = auto
+INFO: RAM style = auto
+INFO: -comp option is FALSE
+INFO: -syn option is FALSE
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001 (searchpath added)
+INFO: -p D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00/data (searchpath added)
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD (searchpath added)
+INFO: -p H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001 (searchpath added)
+INFO: Verilog design file = H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD.v
+INFO: Ngd file = CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd
+INFO: -sdc option: sdc file input not used
+INFO: -lpf option: output file option is ON
+INFO: hardtimer checking is enabled (default); -dt option not used
+INFO: -r option is OFF [ Remove LOC Properties is OFF ]
+-- Technology check ok...MachXO, MachXO2...
+INFO: ** Recompile design **
+-- Technology check ok...MachXO, MachXO2...
+INFO: Compile Design Begin
+h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(23): INFO: compiling module turriscpld (VERI-1018)
+Last elaborated design is turriscpld()
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00e/data/mj5gelib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00/data/mj5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+Package Status:                     Final          Version 1.19
+INFO: Top level module name = turriscpld
+INFO: ######## Converting i/o port : cpld_i2c1_sda to OUTPUT ... (LSE-1067)
+INFO: ######## Missing driver on net : n3018, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3017, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3016, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3019, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3020, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3021, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3022, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3023, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3024, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3025, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3026, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3027, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3028, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3029, patching with GND... (LSE-1017)
+INFO: ######## Missing driver on net : n3030, patching with GND... (LSE-1017)
+
+
+
+ PMux Accepted with new tuning mux_442h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(1310): WARNING: Latch dlatchrs_1080_i4 input is stuck at Zero
+WARNING - synthesis: h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(1310): WARNING: Latch dlatchrs_1080_i4 input is stuck at Zero
+
+h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(978): WARNING: Bit 0 of Register current_state is stuck at Zero (VDB-5010)
+WARNING - synthesis: h:/home_enc/rykl/devel/lattice/projects/cpld_20140106_001/cz_nic_router_cpld.v(978): WARNING: Bit 0 of Register current_state is stuck at Zero
+
+INFO: GSR Instance connected to net: tdmd_uart1n_c_c (LSE-1149)
+WARNING: No user sdc file!
+WARNING - synthesis: WARNING: No user sdc file!
+
+INFO: Applying 200.000000 MHz constraint to all clocks (LSE-5000)
+INFO: Results of ngd drc checks are available in turriscpld_drc.log
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00e/data/mj5gelib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mj5g00/data/mj5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'switch_7' has no load
+WARNING - synthesis: input pad net 'switch_7' has no legal load
+WARNING - synthesis: logical net 'cpu_temp_alert_n' has no load
+WARNING - synthesis: input pad net 'cpu_temp_alert_n' has no legal load
+WARNING - synthesis: logical net 'cpu_temp_crit_n' has no load
+WARNING - synthesis: input pad net 'cpu_temp_crit_n' has no legal load
+WARNING - synthesis: logical net 'eeprom_spi_so' has no load
+WARNING - synthesis: input pad net 'eeprom_spi_so' has no legal load
+WARNING - synthesis: logical net 'ps_1v50_pcie_pgood' has no load
+WARNING - synthesis: input pad net 'ps_1v50_pcie_pgood' has no legal load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'add_140_8/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_8/CO1' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'add_140_14/CO0' has no load
+WARNING - synthesis: logical net 'add_140_6/CO0' has no load
+WARNING - synthesis: logical net 'add_140_12/CO0' has no load
+WARNING - synthesis: logical net 'add_140_4/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_12/CO1' has no load
+WARNING - synthesis: logical net 'add_140_2/CO0' has no load
+WARNING - synthesis: logical net 'color_pwm_counter_2229_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_10/CO0' has no load
+WARNING - synthesis: logical net 'add_140_10/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'add_140_18/CO0' has no load
+WARNING - synthesis: logical net 'add_140_18/CO1' has no load
+WARNING - synthesis: logical net 'add_140_16/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'delay_2225_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_8/CO1' has no load
+WARNING - synthesis: logical net 'mixed_rgb_intensity_pwm_counter_2232_add_4_6/CO0' has no load
+WARNING - synthesis: DRC complete with 37 warnings
+
+Design Results:
+   1322 blocks expanded
+completed the first expansion
+INFO: All blocks are expanded and NGD expansion is successful
+INFO: Writing ngd file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd
+
+################### Begin Area Report (turriscpld)######################
+Number of register bits => 297 of 1200 (24 % )
+BB => 15
+CCU2 => 23
+FD1P3AX => 82
+FD1P3AY => 113
+FD1P3DX => 1
+FD1P3IX => 18
+FD1S1A => 4
+FD1S1I => 4
+FD1S3AX => 37
+FD1S3AY => 8
+FD1S3DX => 6
+FD1S3IX => 24
+GSR => 1
+IB => 46
+L6MUX21 => 17
+OB => 58
+OBZ => 34
+ORCALUT4 => 716
+PFUMX => 112
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 10
+  Net : lwe0_n_out, loads : 184
+  Net : pld_clk_c, loads : 53
+  Net : clkin66_c, loads : 16
+  Net : intensity_button_debounce_clock, loads : 10
+  Net : n1300, loads : 9
+  Net : mixed_rgb_intensity_pwm_clock, loads : 9
+  Net : color_pwm_clock, loads : 9
+  Net : n4798, loads : 5
+  Net : n1428, loads : 4
+  Net : n1214, loads : 3
+Clock Enable Nets
+Number of Clock Enables: 38
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : la31_out, loads : 113
+  Net : la30_out, loads : 69
+  Net : la29_out, loads : 68
+  Net : la28_c, loads : 49
+  Net : color_pwm_counter_7, loads : 37
+  Net : color_pwm_counter_6, loads : 37
+  Net : mixed_rgb_intensity_level_0, loads : 36
+  Net : data_out_0, loads : 28
+  Net : switch_c_4, loads : 25
+  Net : switch_c_3, loads : 25
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk8 [get_nets                          |             |             |
+mixed_rgb_intensity_pwm_clock]          |  200.000 MHz|  347.584 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk7 [get_nets color_pwm_clock]         |  200.000 MHz|  293.169 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk6 [get_nets                          |             |             |
+intensity_button_debounce_clock]        |  200.000 MHz|  197.006 MHz|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk5 [get_nets lgpl2_out]               |  200.000 MHz|  192.456 MHz|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets n4798]                   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets n1214]                   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets lwe0_n_out]              |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clkin66_c]               |  200.000 MHz|  231.107 MHz|     3  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets pld_clk_c]               |  200.000 MHz|   77.924 MHz|    10 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 61.711  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.886  secs
+--------------------------------------------------------------
+
+map -a "MachXO" -p LCMXO1200C -t FTBGA256 -s 3 -oc Commercial   "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd" -o "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd" -pr "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf" -mp "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.mrp" "H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD.lpf" -c 0 -pe           
+map:  version Diamond (64-bit) 2.2.0.101
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ngd
+   Picdevice="LCMXO1200C"
+
+   Pictype="FTBGA256"
+
+   Picspeed=3
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO1200CFTBGA256, Performance used: 3.
+Loading device for application baspr from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+WARNING - map: H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD.lpf (22): Error in FREQUENCY PORT "clkin2m" 2.048000 MHz ;
+: Unable to find clock port "clkin2m" in the design. Disbale this preference.
+WARNING - map: Preference parsing results:  1 semantic error detected
+WARNING - map: There are errors in the preference file, "H:/Home_enc/rykl/devel/Lattice/Projects/cpld_20140106_001/CZ_NIC_Router_CPLD.lpf".
+Package Status:                     Final          Version 1.19
+Running general design DRC...
+WARNING - map: input pad net 'switch_7' has no legal load
+WARNING - map: input pad net 'cpu_temp_alert_n' has no legal load
+WARNING - map: input pad net 'cpu_temp_crit_n' has no legal load
+WARNING - map: input pad net 'eeprom_spi_so' has no legal load
+WARNING - map: input pad net 'ps_1v50_pcie_pgood' has no legal load
+Removing unused logic...
+Optimizing...
+WARNING - map: IO buffer missing for top level port switch[8:1](7)...logic will be discarded.
+WARNING - map: IO buffer missing for top level port cpu_temp_alert_n...logic will be discarded.
+WARNING - map: IO buffer missing for top level port cpu_temp_crit_n...logic will be discarded.
+WARNING - map: IO buffer missing for top level port eeprom_spi_so...logic will be discarded.
+WARNING - map: IO buffer missing for top level port ps_1v50_pcie_pgood...logic will be discarded.
+
+
+
+Design Summary:
+   Number of PFU registers:    297
+   Number of SLICEs:           380 out of   600 (63%)
+      SLICEs(logic/ROM):       380 out of   400 (95%)
+      SLICEs(logic/ROM/RAM):     0 out of   200 (0%)
+          As RAM:            0
+          As Logic/ROM:      0
+   Number of logic LUT4s:     711
+   Number of distributed RAM:   0 (0 LUT4s)
+   Number of ripple logic:     23 (46 LUT4s)
+   Number of shift registers:   0
+   Total number of LUT4s:     757
+   Number of external PIOs: 153 out of 211 (73%)
+   Number of PLLs:  0 out of 1 (0%)
+   Number of block RAMs:  0 out of 1 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Number of TSALL: 0 out of 1 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  9
+     Net lwe0_n_out: 94 loads, 94 rising, 0 falling (Driver: PIO lwe0_n )
+     Net pld_clk_c: 33 loads, 33 rising, 0 falling (Driver: PIO pld_clk )
+     Net clkin66_c: 12 loads, 10 rising, 2 falling (Driver: PIO clkin66 )
+     Net n1214: 2 loads, 2 rising, 0 falling (Driver: i2091_1_lut_2_lut_3_lut )
+     Net n4798: 5 loads, 5 rising, 0 falling (Driver: i9160_2_lut_3_lut )
+     Net lgpl2_out: 7 loads, 0 rising, 7 falling (Driver: PIO lgpl2 )
+     Net intensity_button_debounce_clock: 5 loads, 5 rising, 0 falling (Driver: intensity_button_debounce_clock_1039 )
+     Net color_pwm_clock: 4 loads, 4 rising, 0 falling (Driver: color_pwm_clock_1031 )
+     Net mixed_rgb_intensity_pwm_clock: 4 loads, 4 rising, 0 falling (Driver: mixed_rgb_intensity_pwm_clock_1034 )
+   Number of Clock Enables:  38
+     Net n48_adj_101: 1 loads, 1 LSLICEs
+     Net n6050: 2 loads, 2 LSLICEs
+     Net n6068: 4 loads, 4 LSLICEs
+     Net n10793: 1 loads, 1 LSLICEs
+     Net n166: 1 loads, 1 LSLICEs
+     Net n6063: 4 loads, 4 LSLICEs
+     Net n3129: 2 loads, 2 LSLICEs
+     Net n136: 1 loads, 1 LSLICEs
+     Net n6064: 4 loads, 4 LSLICEs
+     Net n6065: 4 loads, 4 LSLICEs
+     Net n6066: 4 loads, 4 LSLICEs
+     Net n6067: 4 loads, 4 LSLICEs
+     Net n6069: 4 loads, 4 LSLICEs
+     Net n6070: 4 loads, 4 LSLICEs
+     Net n6071: 4 loads, 4 LSLICEs
+     Net n6072: 4 loads, 4 LSLICEs
+     Net n6073: 4 loads, 4 LSLICEs
+     Net n6074: 4 loads, 4 LSLICEs
+     Net n6075: 4 loads, 4 LSLICEs
+     Net n6076: 4 loads, 4 LSLICEs
+     Net n6077: 4 loads, 4 LSLICEs
+     Net n6078: 4 loads, 4 LSLICEs
+     Net n6079: 4 loads, 4 LSLICEs
+     Net n6080: 4 loads, 4 LSLICEs
+     Net n6081: 4 loads, 4 LSLICEs
+     Net n6082: 4 loads, 4 LSLICEs
+     Net n6083: 4 loads, 4 LSLICEs
+     Net n6084: 4 loads, 4 LSLICEs
+     Net n12990: 1 loads, 1 LSLICEs
+     Net lcs3_n_c: 1 loads, 1 LSLICEs
+     Net n4771: 10 loads, 10 LSLICEs
+     Net n30_adj_68: 1 loads, 1 LSLICEs
+     Net n10855: 1 loads, 1 LSLICEs
+     Net n3_adj_110: 1 loads, 1 LSLICEs
+     Net n12979: 1 loads, 1 LSLICEs
+     Net n12977: 1 loads, 1 LSLICEs
+     Net n7_adj_106: 1 loads, 1 LSLICEs
+     Net n10792: 1 loads, 1 LSLICEs
+   Number of LSRs:  9
+     Net n699: 2 loads, 2 LSLICEs
+     Net n12348: 1 loads, 1 LSLICEs
+     Net n12249: 2 loads, 2 LSLICEs
+     Net n3129: 6 loads, 6 LSLICEs
+     Net next_state_2: 1 loads, 1 LSLICEs
+     Net n6315: 4 loads, 4 LSLICEs
+     Net n6314: 2 loads, 2 LSLICEs
+     Net n4859: 9 loads, 9 LSLICEs
+     Net hrstreq_n_c: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net la31_out: 113 loads
+     Net la30_out: 69 loads
+     Net la29_out: 68 loads
+     Net la28_c: 49 loads
+     Net color_pwm_counter_6: 37 loads
+     Net color_pwm_counter_7: 37 loads
+     Net mixed_rgb_intensity_level_0: 36 loads
+     Net data_out_0: 28 loads
+     Net color_pwm_counter_3: 25 loads
+     Net color_pwm_counter_4: 25 loads
+ 
+   Number of warnings:  13
+   Number of errors:    0
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 36 MB
+
+Dumping design to file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd.
+
+mpartrce -p "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.p2t" -f "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.p3t" -tf "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.pt" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd"
+Mon Jan 06 10:52:13 2014
+
+PAR: Place And Route Diamond (64-bit) 2.2.0.101.
+Command Line: par -w -l 5 -i 6 -pe -t 1 -c 0 -e 0 -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.dir/5_1.ncd CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf
+Preference file: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD_map.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 3
+Loading device for application par from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+License checked out.
+
+
+Ignore Preference Error(s):  False
+Device utilization summary:
+
+   GSR                1/1           100% used
+   PIO (prelim)     153/211          72% used
+                    153/211          72% bonded
+   SLICE            380/600          63% used
+
+
+
+Number of Signals: 998
+Number of Connections: 3215
+
+Pin Constraint Summary:
+   151 out of 151 pins locked (100% locked).
+
+The following 4 signals are selected to use the primary clock routing resources:
+    lwe0_n_out (driver: lwe0_n, clk load #: 94)
+    pld_clk_c (driver: pld_clk, clk load #: 33)
+    clkin66_c (driver: clkin66, clk load #: 12)
+    intensity_button_debounce_clock (driver: SLICE_40, clk load #: 5)
+
+The following 3 signals are selected to use the secondary clock routing resources:
+    color_pwm_clock (driver: SLICE_306, clk load #: 4, sr load #: 0, ce load #: 0)
+    mixed_rgb_intensity_pwm_clock (driver: SLICE_138, clk load #: 4, sr load #: 0, ce load #: 0)
+    lgpl2_out (driver: lgpl2, clk load #: 7, sr load #: 0, ce load #: 0)
+
+.
+Starting Placer Phase 0.
+...........
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+............
+Placer score = 8062330.
+Finished Placer Phase 1.  REAL time: 5 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  9150060
+Finished Placer Phase 2.  REAL time: 5 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 2 out of 4 (50%)
+  General PIO: 1 out of 212 (0%)
+  PLL        : 0 out of 1 (0%)
+
+Quadrants All (TL, TR, BL, BR) - Global Clocks:
+  PRIMARY "lwe0_n_out" from comp "lwe0_n" on PIO site "H13 (PR7D)", clk load = 94
+  PRIMARY "pld_clk_c" from comp "pld_clk" on CLK_PIN site "A9 (PT7D)", clk load = 33
+  PRIMARY "clkin66_c" from comp "clkin66" on CLK_PIN site "M9 (PB7F)", clk load = 12
+  PRIMARY "intensity_button_debounce_clock" from Q0 on comp "SLICE_40" on site "R9C4C", clk load = 5
+  SECONDARY "lgpl2_out" from comp "lgpl2" on PIO site "F13 (PR3C)", clk load = 7, ce load = 0, sr load = 0
+  SECONDARY "color_pwm_clock" from Q0 on comp "SLICE_306" on site "R14C5B", clk load = 4, ce load = 0, sr load = 0
+  SECONDARY "mixed_rgb_intensity_pwm_clock" from Q0 on comp "SLICE_138" on site "R9C2B", clk load = 4, ce load = 0, sr load = 0
+
+  PRIMARY  : 4 out of 4 (100%)
+  SECONDARY: 3 out of 4 (75%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   153 out of 211 (72.5%) PIO sites used.
+   153 out of 211 (72.5%) bonded PIO sites used.
+   Number of PIO comps: 153; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 17 / 26 ( 65%) | 3.3V       | -          | -          |
+| 1        | 18 / 28 ( 64%) | 3.3V       | -          | -          |
+| 2        | 21 / 26 ( 80%) | 3.3V       | -          | -          |
+| 3        | 24 / 28 ( 85%) | 3.3V       | -          | -          |
+| 4        | 21 / 27 ( 77%) | 3.3V       | -          | -          |
+| 5        | 19 / 22 ( 86%) | 3.3V       | -          | -          |
+| 6        | 23 / 28 ( 82%) | 3.3V       | -          | -          |
+| 7        | 10 / 26 ( 38%) | 3.3V       | -          | -          |
++----------+----------------+------------+------------+------------+
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.dir/5_1.ncd.
+
+0 connections routed; 3215 unrouted.
+Starting router resource preassignment
+WARNING - par: The driver of primary clock net lwe0_n_out is not placed on one of the PIO sites dedicated for primary clocks.  This primary clock will be routed to a H-spine through general routing resource or will be routed as a secondary clock and may suffer from excessive delay or skew.
+WARNING - par: The driver of secondary clock net lgpl2_out is not placed on one of the PIO sites dedicated for secondary clocks.  This secondary clock will be routed through general routing resource and may suffer from excessive delay or skew.
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=n1214 loads=2 clock_loads=2
+   Signal=n4798 loads=5 clock_loads=5
+
+Completed router resource preassignment. Real time: 7 secs 
+
+Start NBR router at 10:52:20 01/06/14
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design. Thanks.                                       
+*****************************************************************
+
+Start NBR special constraint process at 10:52:20 01/06/14
+
+Start NBR section for initial routing
+Level 1, iteration 1
+2(0.00%) conflicts; 2966(92.26%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 9.000ns/0.000ns; real time: 7 secs 
+Level 2, iteration 1
+2(0.00%) conflicts; 2964(92.19%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 8.228ns/0.000ns; real time: 7 secs 
+Level 3, iteration 1
+2(0.00%) conflicts; 2964(92.19%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 8.228ns/0.000ns; real time: 7 secs 
+Level 4, iteration 1
+107(0.21%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 8.196ns/0.000ns; real time: 8 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing
+Level 4, iteration 1
+40(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+Level 4, iteration 2
+22(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+Level 4, iteration 3
+9(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+Level 4, iteration 4
+3(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+Level 4, iteration 6
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+
+Start NBR section for re-routing
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 7.564ns/0.000ns; real time: 8 secs 
+
+Start NBR section for post-routing
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack : 7.564ns
+  Timing score : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Hold time optimization iteration 0:
+There are 33 hold time violations, the optimization is running ...
+End of iteration 0
+3215 successful; 0 unrouted;  real time: 9 secs 
+
+Hold time optimization iteration 1:
+There are 3 hold time violations, the optimization is running ...
+WARNING - par: 
+Holdtime correction process will stop now due to runtime too long. To run with extra effort, please read online help or run with "-exp parHold=2".
+
+Starting iterative routing.
+End of iteration 1
+3215 successful; 0 unrouted;  real time: 10 secs 
+
+Hold time optimization completed
+Total CPU time 9 secs 
+Total REAL time: 10 secs 
+Completely routed.
+End of route.  3215 routed (100.00%); 0 unrouted.
+Checking DRC ... 
+No errors found.
+
+Hold time timing score: 1, hold timing errors: 3
+
+Timing score: 0 
+
+Dumping design to file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 8.186
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.468
+PAR_SUMMARY::Timing score<hold /<ns>> = 1.222
+
+Total CPU  time to completion: 9 secs 
+Total REAL time to completion: 11 secs 
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.pt" -o "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.twr" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf"
+trce:  version Diamond (64-bit) 2.2.0.101
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file cz_nic_router_cpld_cz_nic_router_cpld.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 3
+Loading device for application trce from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 2.2.0.101
+Mon Jan 06 10:52:24 2014
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.twr CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf 
+Design file:     cz_nic_router_cpld_cz_nic_router_cpld.ncd
+Preference file: cz_nic_router_cpld_cz_nic_router_cpld.prf
+Device,speed:    LCMXO1200C,3
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1984 paths, 9 nets, and 1088 connections (33.8% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 2.2.0.101
+Mon Jan 06 10:52:24 2014
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.twr CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf 
+Design file:     cz_nic_router_cpld_cz_nic_router_cpld.ncd
+Preference file: cz_nic_router_cpld_cz_nic_router_cpld.prf
+Device,speed:    LCMXO1200C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 3  Score: 1222
+Cumulative negative slack: 1222
+
+Constraints cover 1984 paths, 9 nets, and 1088 connections (33.8% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 3 (hold)
+Score: 0 (setup), 1222 (hold)
+Cumulative negative slack: 1222 (0+1222)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total time: 0 secs 
+
+iotiming  "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 2.2.0.101
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file cz_nic_router_cpld_cz_nic_router_cpld.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 3
+Loading device for application iotiming from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+Running Performance Grade: 3
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cz_nic_router_cpld_cz_nic_router_cpld.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 4
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+Running Performance Grade: 4
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cz_nic_router_cpld_cz_nic_router_cpld.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 5
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cz_nic_router_cpld_cz_nic_router_cpld.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: M
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+bitgen -w "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd" -f "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.t2b" "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 2.2.0.101
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2013 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.ncd.
+Design name: turriscpld
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO1200C
+Package:     FTBGA256
+Performance: 3
+Loading device for application Bitgen from file 'mj5g17x12.nph' in environment: D:/Apl/LatticeSemi/lscc/diamond/2.2_x64/ispfpga.
+Package Status:                     Final          Version 1.19
+Performance Hardware Data Status: Version 1.84
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.prf...
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.bit".
+
+ispdfw -dev LCMXO1200C-XXFT256 -if "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.bit" -oft -jed -of "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.jed"  -comment "CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.alt"
+
+Device Info:
+Full name: LCMXO1200C
+Row Width: 796
+Column Width: 348
+Usercode bit #: 32
+Processing BIT2JED...
+
+Input: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.bit
+Output: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.jed
+Overwriteues: 0
+Comment file: CZ_NIC_Router_CPLD_CZ_NIC_Router_CPLD.alt
+Lever: 0
++-------------+
+|   Succeed!  |
++-------------+
